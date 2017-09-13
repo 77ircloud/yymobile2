@@ -31,7 +31,7 @@ var babelOptions = {
 
 var config = {
   entry: {
-    path: './yymobile/index.tsx'
+    path: path.join(ROOT_PATH, "/yymobile/index")
   },
   output: {
     path: path.join(ROOT_PATH, "/yydist"),
@@ -108,13 +108,13 @@ var config = {
     'rmc-nuka-carousel': 'rmc-nuka-carousel'
   },
   plugins:[
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: function () {
-          return [precss, autoprefixer];
-        }
-      }
-    })
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     postcss: function () {
+    //       return [precss, autoprefixer];
+    //     }
+    //   }
+    // })
     // ,new BundleAnalyzerPlugin({
     //   analyzerMode: 'server',
     //   // Host that will be used in `server` mode to start HTTP server.

@@ -12,3 +12,8 @@ if (ENV !== 'production' &&
 }
 
 export { default as Accordion } from './accordion/index';
+export { default as ActionSheet } from './action-sheet/index';
+export { default as ActivityIndicator } from './activity-indicator/index';
+export { default as Badge } from './badge/index';
+export { default as Button } from './button/index';
+export { default as Calendar } from './calendar/index';
