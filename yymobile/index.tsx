@@ -17,3 +17,8 @@ export { default as ActivityIndicator } from './activity-indicator/index';
 export { default as Badge } from './badge/index';
 export { default as Button } from './button/index';
 export { default as Calendar } from './calendar/index';
+export { default as Card } from './card/index';
+export { default as Carousel } from './carousel/index';
+export { default as Checkbox } from './checkbox/index';
+export { default as DatePicker } from './date-picker/index';
+export { default as DatePickerView } from './date-picker-view/index';
