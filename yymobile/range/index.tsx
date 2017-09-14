@@ -1,15 +1,14 @@
 import React from 'react';
 import RcRange from 'rc-slider/lib/Range';
 import RangeProps from './PropsType';
+import { Range as _Range } from 'antd-mobile';
 
 export default class Range extends React.Component<RangeProps, any> {
   static defaultProps = {
-    prefixCls: 'am-slider',
+    prefixCls: 'yy-slider',
   };
 
   render() {
-    return (
-      <div className={`${this.props.prefixCls}-wrapper`}><RcRange {...this.props} /></div>
-    );
+    return <_Range {...this.props} />;
   }
 }

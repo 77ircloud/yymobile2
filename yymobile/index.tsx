@@ -46,3 +46,6 @@ export { default as Progress } from './progress/index';
 
 export { default as Radio } from './radio/index';
 export { default as Range } from './range/index';
+export { default as RefreshControl } from './refresh-control/index';
+export { default as Result } from './result/index';
+export { default as SearchBar } from './search-bar/index';
