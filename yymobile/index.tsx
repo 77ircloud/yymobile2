@@ -49,3 +49,6 @@ export { default as Range } from './range/index';
 export { default as RefreshControl } from './refresh-control/index';
 export { default as Result } from './result/index';
 export { default as SearchBar } from './search-bar/index';
+export { default as SegmentedControl } from './segmented-control/index';
+export { default as Slider } from './slider/index';
+export { default as Stepper } from './stepper/index';
