@@ -61,3 +61,6 @@ export { default as Tag } from './tag/index';
 export { default as Text } from './text/index';
 export { default as TextareaItem } from './textarea-item/index';
 export { default as Toast } from './toast/index';
+export { default as View } from './view/index';
+export { default as WhiteSpace } from './white-space/index';
+export { default as WingBlank } from './wing-blank/index';
