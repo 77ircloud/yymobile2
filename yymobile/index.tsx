@@ -42,3 +42,7 @@ export { default as Pagination } from './pagination/index';
 export { default as Picker } from './picker/index';
 export { default as PickerView } from './picker-view/index';
 export { default as Popover } from './popover/index';
+export { default as Progress } from './progress/index';
+
+export { default as Radio } from './radio/index';
+export { default as Range } from './range/index';
