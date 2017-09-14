@@ -9,7 +9,7 @@ sticky index List
 
 
 ````jsx
-imoprt { ListView, List } from 'yymobile';
+import { ListView, List } from 'yymobile';
 import { province as provinceData } from 'antd-mobile-demo-data';
 import { SearchBar } from 'antd-mobile';
 

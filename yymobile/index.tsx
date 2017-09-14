@@ -35,3 +35,10 @@ export { default as Menu } from './menu/index';
 export { default as Modal } from './modal/index';
 
 export { default as LocaleProvider } from './locale-provider/index';
+export { default as NavBar } from './nav-bar/index';
+export { default as NoticeBar } from './notice-bar/index';
+
+export { default as Pagination } from './pagination/index';
+export { default as Picker } from './picker/index';
+export { default as PickerView } from './picker-view/index';
+export { default as Popover } from './popover/index';
