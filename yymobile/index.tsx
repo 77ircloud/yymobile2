@@ -52,3 +52,6 @@ export { default as SearchBar } from './search-bar/index';
 export { default as SegmentedControl } from './segmented-control/index';
 export { default as Slider } from './slider/index';
 export { default as Stepper } from './stepper/index';
+export { default as Steps } from './steps/index';
+export { default as SwipeAction } from './swipe-action/index';
+export { default as Switch } from './switch/index';
