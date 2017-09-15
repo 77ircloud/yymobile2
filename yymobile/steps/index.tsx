@@ -1,4 +1,5 @@
 import React from 'react';
+import RcSteps from 'rc-steps';
 import { Steps as _Steps } from "antd-mobile";
 
 export interface StepsProps {

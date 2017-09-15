@@ -33,7 +33,8 @@ module.exports = {
       'antd-mobile/lib': path.join(process.cwd(), 'components'),
       'yymobile/lib': path.join(process.cwd(), 'yymobile'),
       'antd-mobile': process.cwd(),
-      'yymobile': process.cwd(),
+      // 'yymobile': process.cwd(),
+      'yymobile': path.join(process.cwd(), 'yymobile'),
       site: path.join(process.cwd(), 'site'),
     };
 

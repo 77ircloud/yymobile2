@@ -11,12 +11,12 @@ title:
 
 ## en-US
 
-Basic demo of Progress.
+Basic demo of Progresss.
 
 ````jsx
-import { Progress, Button } from 'yymobile';
+import { Progresss, Button } from 'antd-mobile';
 
-class MyProgress extends React.Component {
+class MyProgresss extends React.Component {
   state = {
     percent: 50,
   };
@@ -31,14 +31,20 @@ class MyProgress extends React.Component {
     const { percent } = this.state;
     return (
       <div className="progress-container">
-        <Progress percent={40} position="normal" unfilled={false} appearTransition />
+        <Progresss percent={30} position="fixed" />
+        <div style={{ height: 36 }} />
+        <Progresss percent={40} position="normal" unfilled={false} appearTransition />
+        <div className="show-info">
+          <div className="progress"><Progresss percent={percent} position="normal" /></div>
+          <div aria-hidden="true">{percent}%</div>
+        </div>
         <Button inline style={{ marginTop: 20, marginLeft: 30 }} onClick={this.add}>(+-)10</Button>
       </div>
     );
   }
 }
 
-ReactDOM.render(<MyProgress />, mountNode);
+ReactDOM.render(<MyProgresss />, mountNode);
 ````
 
 ````css

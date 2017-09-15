@@ -13,6 +13,11 @@ const pluginAntdConfig = {
           libraryName: 'antd-mobile',
           libraryDirectory: 'components',
         },
+        require.resolve('babel-plugin-import'), {
+          style: true,
+          libraryName: 'yymobile',
+          libraryDirectory: 'yymobile',
+        },
       ],
     ],
   },

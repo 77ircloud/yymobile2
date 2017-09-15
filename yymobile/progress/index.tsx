@@ -12,6 +12,6 @@ export default class Progress extends React.Component<ProgressProps, any> {
   };
 
   render() {
-    return <_Progress {...this.props} />;
+    return <div>45555</div>;
   }
 }
