@@ -1,5 +1,5 @@
 import React from 'react';
-import { Progress as _Progress} from 'antd-mobile';
+import { Progress as Progress_} from 'antd-mobile';
 import ProgressProps from './PropsType';
 
 export default class Progress extends React.Component<ProgressProps, any> {

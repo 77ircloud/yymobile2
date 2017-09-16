@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator as _ActivityIndicator} from 'antd-mobile';
+import { ActivityIndicator as ActivityIndicator_} from 'antd-mobile';
 import ActivityIndicatorPropTypes from './PropsType';
 
 export default class ActivityIndicator extends React.Component<ActivityIndicatorPropTypes, any> {
@@ -9,6 +9,6 @@ export default class ActivityIndicator extends React.Component<ActivityIndicator
   };
 
   render() {
-    return <_ActivityIndicator {...this.props} />;
+    return <ActivityIndicator_ {...this.props} />;
   }
 }

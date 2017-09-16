@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs as RMCTabs, DefaultTabBar as RMCDefaultTabBar, TabBarPropsType } from 'rmc-tabs';
-import { Tabs as _Tabs } from "antd-mobile";
+import { Tabs as Tabs_ } from "antd-mobile";
 import TabsProps from './PropsType';
 
 export class DefaultTabBar extends React.PureComponent<any, any> {
@@ -9,7 +9,7 @@ export class DefaultTabBar extends React.PureComponent<any, any> {
   }
 
   render() {
-    return <_Tabs.DefaultTabBar {...this.props} />;
+    return <Tabs_.DefaultTabBar {...this.props} />;
   }
 }
 
@@ -21,6 +21,6 @@ export default class Tabs extends React.PureComponent<TabsProps, {}> {
   };
 
   render() {
-    return <_Tabs {...this.props} />;
+    return <Tabs_ {...this.props} />;
   }
 }

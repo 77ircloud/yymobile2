@@ -1,8 +1,8 @@
 import Modal from './Modal';
-import { Modal as _Modal } from "antd-mobile";
+import { Modal as Modal_ } from "antd-mobile";
 
-Modal.alert = _Modal.alert;
-Modal.prompt = _Modal.prompt;
-Modal.operation = _Modal.operation;
+Modal.alert = Modal_.alert;
+Modal.prompt = Modal_.prompt;
+Modal.operation = Modal_.operation;
 
 export default Modal;

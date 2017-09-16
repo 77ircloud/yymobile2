@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge as _Badge } from 'antd-mobile';
+import { Badge as Badge_ } from 'antd-mobile';
 import BadgeProps from './PropsType';
 
 export default class Badge extends React.Component<BadgeProps, any> {
@@ -9,6 +9,6 @@ export default class Badge extends React.Component<BadgeProps, any> {
   };
 
   render() {
-    return <_Badge {...this.props} />;
+    return <Badge_ {...this.props} />;
   }
 }

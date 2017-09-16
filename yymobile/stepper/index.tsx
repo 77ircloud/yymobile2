@@ -1,6 +1,6 @@
 import React from 'react';
 import StepProps from './PropsType';
-import { Stepper as _Stepper } from "antd-mobile";
+import { Stepper as Stepper_ } from "antd-mobile";
 
 export default class Stepper extends React.Component<StepProps, any> {
   static defaultProps = {
@@ -15,6 +15,6 @@ export default class Stepper extends React.Component<StepProps, any> {
   stepperRef: any;
 
   render() {
-    return <_Stepper {...this.props} />;
+    return <Stepper_ {...this.props} />;
   }
 }

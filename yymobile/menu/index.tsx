@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu as _Menu} from 'antd-mobile';
+import { Menu as Menu_} from 'antd-mobile';
 import MenuProps from './PropsType';
 
 export default class Menu extends React.Component<MenuProps, any> {
@@ -9,6 +9,6 @@ export default class Menu extends React.Component<MenuProps, any> {
   };
 
   render() {
-    return <_Menu {...this.props} />;
+    return <Menu_ {...this.props} />;
   }
 }

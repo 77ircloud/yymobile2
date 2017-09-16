@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImagePicker as _ImagePicker} from 'antd-mobile';
+import { ImagePicker as ImagePicker_} from 'antd-mobile';
 import ImagePickerPropTypes from './PropsType';
 
 export default class ImagePicker extends React.Component<ImagePickerPropTypes, any> {
@@ -9,6 +9,6 @@ export default class ImagePicker extends React.Component<ImagePickerPropTypes, a
   };
 
   render() {
-    return <_ImagePicker {...this.props} />;
+    return <ImagePicker_ {...this.props} />;
   }
 }

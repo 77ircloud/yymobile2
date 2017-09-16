@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputItem as _InputItem} from 'antd-mobile';
+import { InputItem as InputItem_} from 'antd-mobile';
 import InputItemProps from './PropsType';
 
 export default class InputItem extends React.Component<InputItemProps, any> {
@@ -9,6 +9,6 @@ export default class InputItem extends React.Component<InputItemProps, any> {
   };
 
   render() {
-    return <_InputItem {...this.props} />;
+    return <InputItem_ {...this.props} />;
   }
 }

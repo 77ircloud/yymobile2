@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { SearchBarProps, SearchBarState, defaultProps } from './PropsType';
-import { SearchBar as _SearchBar } from "antd-mobile";
+import { SearchBar as SearchBar_ } from "antd-mobile";
 
 export default class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   static defaultProps = defaultProps;
@@ -17,6 +17,6 @@ export default class SearchBar extends React.Component<SearchBarProps, SearchBar
   private inputContainerRef: any;
 
   render() {
-    return <_SearchBar {...this.props} />;
+    return <SearchBar_ {...this.props} />;
   }
 }

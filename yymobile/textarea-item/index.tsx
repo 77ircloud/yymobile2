@@ -1,7 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import TextareaItemProps from './PropsType';
-import { TextareaItem as _TextareaItem } from "antd-mobile";
+import { TextareaItem as TextareaItem_ } from "antd-mobile";
 
 function noop() {}
 

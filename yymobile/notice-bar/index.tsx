@@ -1,5 +1,5 @@
 import React from 'react';
-import { NoticeBar as _NoticeBar} from 'antd-mobile';
+import { NoticeBar as NoticeBar_} from 'antd-mobile';
 import INoticeWebProps from './PropsType';
 
 export default class NoticeBar extends React.Component<INoticeWebProps, any> {
@@ -9,6 +9,6 @@ export default class NoticeBar extends React.Component<INoticeWebProps, any> {
   };
 
   render() {
-    return <_NoticeBar {...this.props} />;
+    return <NoticeBar_ {...this.props} />;
   }
 }

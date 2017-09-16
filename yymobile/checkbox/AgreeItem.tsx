@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { AgreeItemPropsType } from './PropsType';
 import getDataAttr from '../_util/getDataAttr';
-import { Checkbox as _Checkbox } from 'antd-mobile';
+import { Checkbox as Checkbox_ } from 'antd-mobile';
 
 export default class AgreeItem extends React.Component<AgreeItemPropsType, any> {
   static defaultProps = {
@@ -10,6 +10,6 @@ export default class AgreeItem extends React.Component<AgreeItemPropsType, any> 
   };
 
   render() {
-    return <_Checkbox.AgreeItem {...this.props} />;
+    return <Checkbox_.AgreeItem {...this.props} />;
   }
 }

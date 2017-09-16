@@ -1,6 +1,6 @@
 import React from 'react';
 import WingBlankProps from './PropsType';
-import { WingBlank as _WingBlank } from "antd-mobile";
+import { WingBlank as WingBlank_ } from "antd-mobile";
 
 export default class WingBlank extends React.Component<WingBlankProps, any> {
   static defaultProps = {
@@ -9,6 +9,6 @@ export default class WingBlank extends React.Component<WingBlankProps, any> {
   };
 
   render() {
-    return <_WingBlank {...this.props} />;
+    return <WingBlank_ {...this.props} />;
   }
 }

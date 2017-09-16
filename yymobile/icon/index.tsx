@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon as _Icon } from 'antd-mobile';
+import { Icon as Icon_ } from 'antd-mobile';
 import GridProps from './PropsType';
 
 export interface IconPropType {
@@ -17,6 +17,6 @@ export default class Icon extends React.Component<IconPropType, any> {
   };
 
   render() {
-    return <_Icon {...this.props} />;
+    return <Icon_ {...this.props} />;
   }
 }

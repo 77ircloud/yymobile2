@@ -1,5 +1,5 @@
 import React from 'react';
-import { PickerView as _PickerView} from 'antd-mobile';
+import { PickerView as PickerView_} from 'antd-mobile';
 import Props from './PropsType';
 
 export interface IPickerView {
@@ -17,6 +17,6 @@ export interface IPickerView {
 export default class PickerView extends React.Component<IPickerView, any> {
 
   render() {
-    return <_PickerView {...this.props} />;
+    return <PickerView_ {...this.props} />;
   }
 }

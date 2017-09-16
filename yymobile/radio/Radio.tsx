@@ -1,6 +1,6 @@
 import React from 'react';
 import { RadioProps } from './PropsType';
-import { Radio as _Radio } from 'antd-mobile';
+import { Radio as Radio_ } from 'antd-mobile';
 
 export default class Radio extends React.Component<RadioProps, any> {
   static RadioItem: any;
@@ -11,6 +11,6 @@ export default class Radio extends React.Component<RadioProps, any> {
   };
 
   render() {
-    return <_Radio {...this.props} />;
+    return <Radio_ {...this.props} />;
   }
 }

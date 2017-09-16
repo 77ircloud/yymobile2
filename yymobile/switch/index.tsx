@@ -1,6 +1,6 @@
 import React from 'react';
 import SwitchProps from './PropsType';
-import { Switch as _Switch } from "antd-mobile";
+import { Switch as Switch_ } from "antd-mobile";
 
 export default class Switch extends React.Component<SwitchProps, any> {
   static defaultProps = {
@@ -14,6 +14,6 @@ export default class Switch extends React.Component<SwitchProps, any> {
   };
 
   render() {
-    return <_Switch {...this.props} />;
+    return <Switch_ {...this.props} />;
   }
 }

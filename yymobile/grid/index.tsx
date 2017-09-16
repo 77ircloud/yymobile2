@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid as _Grid} from 'antd-mobile';
+import { Grid as Grid_} from 'antd-mobile';
 import GridProps from './PropsType';
 
 export default class Grid extends React.Component<GridProps, any> {
@@ -9,6 +9,6 @@ export default class Grid extends React.Component<GridProps, any> {
   };
 
   render() {
-    return <_Grid {...this.props} />;
+    return <Grid_ {...this.props} />;
   }
 }

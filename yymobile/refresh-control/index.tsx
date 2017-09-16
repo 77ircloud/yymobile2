@@ -1,6 +1,6 @@
 import React from 'react';
 import { Props } from './PropsType';
-import { RefreshControl as _RefreshControl } from 'antd-mobile';
+import { RefreshControl as RefreshControl_ } from 'antd-mobile';
 
 export default class RefreshControl extends React.Component<Props, any> {
 
@@ -9,6 +9,6 @@ export default class RefreshControl extends React.Component<Props, any> {
   };
 
   render() {
-    return <_RefreshControl {...this.props} />;
+    return <RefreshControl_ {...this.props} />;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import RcSteps from 'rc-steps';
-import { Steps as _Steps } from "antd-mobile";
+import { Steps as Steps_ } from "antd-mobile";
 
 export interface StepsProps {
   prefixCls?: string;
@@ -27,6 +27,6 @@ export default class Steps extends React.Component<StepsProps, any> {
   stepsRef: any;
 
   render() {
-    return <_Steps {...this.props} />;
+    return <Steps_ {...this.props} />;
   }
 }

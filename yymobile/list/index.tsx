@@ -1,5 +1,5 @@
 import React from 'react';
-import { List as _List} from 'antd-mobile';
+import { List as List_} from 'antd-mobile';
 import ListProps from './PropsType';
 
 export default class List extends React.Component<ListProps, any> {
@@ -9,6 +9,6 @@ export default class List extends React.Component<ListProps, any> {
   };
 
   render() {
-    return <_List {...this.props} />;
+    return <List_ {...this.props} />;
   }
 }

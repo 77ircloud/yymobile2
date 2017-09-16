@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer as _Drawer } from 'antd-mobile';
+import { Drawer as Drawer_ } from 'antd-mobile';
 import tsPropsType from './PropsType';
 
 export default class Drawer extends React.Component<tsPropsType, any> {
@@ -8,6 +8,6 @@ export default class Drawer extends React.Component<tsPropsType, any> {
     enableDragHandle: false,
   };
   render() {
-    return <_Drawer {...this.props} />;
+    return <Drawer_ {...this.props} />;
   }
 }

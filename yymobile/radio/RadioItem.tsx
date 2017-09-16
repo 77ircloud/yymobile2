@@ -1,7 +1,7 @@
 import React from 'react';
 import List from '../list';
 import { RadioItemProps } from './PropsType';
-import { Radio as _Radio } from 'antd-mobile';
+import { Radio as Radio_ } from 'antd-mobile';
 
 const ListItem = List.Item;
 function noop() { }
@@ -14,6 +14,6 @@ export default class RadioItem extends React.Component<RadioItemProps, any> {
   };
 
   render() {
-    return <_Radio.RadioItem {...this.props} />;
+    return <Radio_.RadioItem {...this.props} />;
   }
 }

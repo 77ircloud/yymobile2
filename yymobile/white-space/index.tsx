@@ -1,6 +1,6 @@
 import React from 'react';
 import WhiteSpaceProps from './PropsType';
-import { WhiteSpace as _WhiteSpace } from "antd-mobile";
+import { WhiteSpace as WhiteSpace_ } from "antd-mobile";
 
 export default class WhiteSpace extends React.Component<WhiteSpaceProps, any> {
   static defaultProps = {
@@ -9,6 +9,6 @@ export default class WhiteSpace extends React.Component<WhiteSpaceProps, any> {
   };
 
   render() {
-    return <_WhiteSpace {...this.props} />;
+    return <WhiteSpace_ {...this.props} />;
   }
 }

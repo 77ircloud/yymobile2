@@ -32,6 +32,7 @@ module.exports = {
     config.resolve.alias = {
       'antd-mobile/lib': path.join(process.cwd(), 'components'),
       'yymobile/lib': path.join(process.cwd(), 'yymobile'),
+      // 'antd-mobile': process.cwd(),
       'antd-mobile': process.cwd(),
       // 'yymobile': process.cwd(),
       'yymobile': path.join(process.cwd(), 'yymobile'),

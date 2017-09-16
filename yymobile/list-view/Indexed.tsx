@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListView as _ListView} from 'antd-mobile';
+import { ListView as ListView_} from 'antd-mobile';
 import tsPropsType from './PropsType';
 
 export default class MIndexedList extends React.Component<tsPropsType, any> {
@@ -11,6 +11,6 @@ export default class MIndexedList extends React.Component<tsPropsType, any> {
   };
 
   render() {
-    return <_ListView.IndexedList {...this.props} />;
+    return <ListView_.IndexedList {...this.props} />;
   }
 }

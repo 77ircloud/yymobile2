@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover as _Popover} from 'antd-mobile';
+import { Popover as Popover_} from 'antd-mobile';
 
 export default class Item extends React.Component<any, any> {
   static defaultProps = {
@@ -9,6 +9,6 @@ export default class Item extends React.Component<any, any> {
   static myName = 'PopoverItem';
 
   render() {
-    return <_Popover.Item {...this.props} />;
+    return <Popover_.Item {...this.props} />;
   }
 }

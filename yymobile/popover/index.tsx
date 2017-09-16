@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover as _Popover} from 'antd-mobile';
+import { Popover as Popover_} from 'antd-mobile';
 import Item from './Item';
 import tsPropsType from './PropsType';
 
@@ -13,6 +13,6 @@ export default class Popover extends React.Component<tsPropsType, any> {
   static Item = Item;
 
   render() {
-    return <_Popover {...this.props} />;
+    return <Popover_ {...this.props} />;
   }
 }

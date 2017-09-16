@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabBarProps, TabBarItemProps } from './PropsType';
-import { AntTabBar as _AntTabBar } from "antd-mobile";
+import { TabBar as TabBar_ } from "antd-mobile";
 
 export class Item extends React.Component<TabBarItemProps, any> {
   render() {
@@ -8,7 +8,7 @@ export class Item extends React.Component<TabBarItemProps, any> {
   }
 }
 
-class AntTabBar extends React.Component<TabBarProps, any> {
+class TabBar extends React.Component<TabBarProps, any> {
   static defaultProps = {
     prefixCls: 'yy-tab-bar',
     barTintColor: 'white',
@@ -21,8 +21,8 @@ class AntTabBar extends React.Component<TabBarProps, any> {
   public static Item = Item;
 
   render() {
-    return <_AntTabBar {...this.props} />;
+    return <TabBar_ {...this.props} />;
   }
 }
 
-export default AntTabBar;
+export default TabBar;

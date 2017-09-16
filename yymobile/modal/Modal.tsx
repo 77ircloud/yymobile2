@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal as _Modal} from 'antd-mobile';
+import { Modal as Modal_} from 'antd-mobile';
 import MenuProps from './PropsType';
 
 export default class Modal extends React.Component<ModalProps, any> {
@@ -9,6 +9,6 @@ export default class Modal extends React.Component<ModalProps, any> {
   };
 
   render() {
-    return <_Modal {...this.props} />;
+    return <Modal_ {...this.props} />;
   }
 }

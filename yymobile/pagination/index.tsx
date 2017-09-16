@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pagination as _Pagination} from 'antd-mobile';
+import { Pagination as Pagination_} from 'antd-mobile';
 import PaginationPropTypes from './PropsType';
 
 export default class Pagination extends React.Component<PaginationPropTypes, any> {
@@ -9,6 +9,6 @@ export default class Pagination extends React.Component<PaginationPropTypes, any
   };
 
   render() {
-    return <_Pagination {...this.props} />;
+    return <Pagination_ {...this.props} />;
   }
 }

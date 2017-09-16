@@ -1,5 +1,5 @@
 import React from 'react';
-import { DatePicker as _DatePicker} from 'antd-mobile';
+import { DatePicker as DatePicker_} from 'antd-mobile';
 import DatePickerProps from './PropsType';
 
 export default class DatePicker extends React.Component<DatePickerProps, any> {
@@ -11,6 +11,6 @@ export default class DatePicker extends React.Component<DatePickerProps, any> {
   };
 
   render() {
-    return <_DatePicker {...this.props} />;
+    return <DatePicker_ {...this.props} />;
   }
 }

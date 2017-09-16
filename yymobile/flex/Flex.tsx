@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex as _Flex} from 'antd-mobile';
+import { Flex as Flex_ } from 'antd-mobile';
 import FlexProps from './PropsType';
 
 export default class Flex extends React.Component<FlexProps, any> {
@@ -9,6 +9,6 @@ export default class Flex extends React.Component<FlexProps, any> {
   };
 
   render() {
-    return <_Flex {...this.props} />;
+    return <Flex_ {...this.props} />;
   }
 }

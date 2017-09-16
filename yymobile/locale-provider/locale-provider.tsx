@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocaleProvider as _LocaleProvider } from 'antd-mobile';
+import { LocaleProvider as LocaleProvider_ } from 'antd-mobile';
 import PropTypes from 'prop-types';
 
 export interface LocaleProviderProps {
@@ -18,6 +18,6 @@ export default class LocaleProvider extends React.Component<LocaleProviderProps,
   };
 
   render() {
-    return <_LocaleProvider {...this.props} />;
+    return <LocaleProvider_ {...this.props} />;
   }
 }

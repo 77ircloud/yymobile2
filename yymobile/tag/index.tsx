@@ -1,6 +1,6 @@
 import React from 'react';
 import TagProps from './PropsType';
-import { Tabs as _Tabs } from "antd-mobile";
+import { Tabs as Tabs_ } from "antd-mobile";
 
 export default class Tag extends React.Component<TagProps, any> {
   static defaultProps = {
@@ -15,6 +15,6 @@ export default class Tag extends React.Component<TagProps, any> {
   };
 
   render() {
-    return <_Tabs {...this.props} />;
+    return <Tabs_ {...this.props} />;
   }
 }

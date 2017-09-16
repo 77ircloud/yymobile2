@@ -1,7 +1,7 @@
 import React from 'react';
 import RcRange from 'rc-slider/lib/Range';
 import RangeProps from './PropsType';
-import { Range as _Range } from 'antd-mobile';
+import { Range as Range_ } from 'antd-mobile';
 
 export default class Range extends React.Component<RangeProps, any> {
   static defaultProps = {
@@ -9,6 +9,6 @@ export default class Range extends React.Component<RangeProps, any> {
   };
 
   render() {
-    return <_Range {...this.props} />;
+    return <Range_ {...this.props} />;
   }
 }

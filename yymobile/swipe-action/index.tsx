@@ -1,6 +1,6 @@
 import React from 'react';
 import SwipeActionProps from './PropsType';
-import { SwipeAction as _SwipeAction } from "antd-mobile";
+import { SwipeAction as SwipeAction_ } from "antd-mobile";
 
 class SwipeAction extends React.Component<SwipeActionProps, any> {
   static defaultProps = {
@@ -15,7 +15,7 @@ class SwipeAction extends React.Component<SwipeActionProps, any> {
   };
 
   render() {
-    return <_SwipeAction {...this.props} />;
+    return <SwipeAction_ {...this.props} />;
   }
 }
 

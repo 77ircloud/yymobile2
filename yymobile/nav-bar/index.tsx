@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar as _NavBar} from 'antd-mobile';
+import { NavBar as NavBar_} from 'antd-mobile';
 import NavBarProps from './PropsType';
 
 export default class NavBar extends React.Component<NavBarProps, any> {
@@ -9,6 +9,6 @@ export default class NavBar extends React.Component<NavBarProps, any> {
   };
 
   render() {
-    return <_NavBar {...this.props} />;
+    return <NavBar_ {...this.props} />;
   }
 }
