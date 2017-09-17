@@ -1,0 +1,73 @@
+@import '../../style/mixins';
+@import '../../style/themes/default';
+
+@navbar-height: 45 * @hd;
+@yyNavbarPrefixCls: yy-yybar;
+
+.@{yyNavbarPrefixCls} {
+  align-items: center;
+  height: @navbar-height;
+  background-color: @brand-primary;
+  color: @fill-base;
+  position: relative;
+  padding-left: 32px;
+  display: flex;
+
+  &-left {
+    font-size: @link-button-font-size;
+    position: absolute;
+    left: 7px;
+    width: 22px;
+
+    &-icon {
+      margin-right: @h-spacing-sm;
+      display: inherit;
+      .am-icon {
+        width: 65px;
+        height: 65px;
+      }
+    }
+  }
+
+  &-right {
+    font-size: @link-button-font-size;
+    width: 100%;
+
+    .yy-search {
+      background-color: @brand-primary;
+      .yy-search-cancel {
+        color: #fff;
+      }
+      .yy-search-input {
+        background-color:rgba(255,255,255,0.3);
+        border-radius: 56px;
+        .yy-search-synthetic-ph-placeholder {
+          color: #fff;
+        }
+        .yy-search-synthetic-ph-icon {
+          fill: #fff;
+        }
+      }
+    }
+    .anticon {
+      margin-right: @h-spacing-sm;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-content {
+      margin-right: @h-spacing-sm;
+    }
+  }
+
+  &-light {
+    background-color: @fill-base;
+    color: @brand-primary;
+  }
+
+  &-light &-title {
+    color: @color-text-base;
+  }
+}
