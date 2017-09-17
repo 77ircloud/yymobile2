@@ -67,4 +67,5 @@ export { default as WingBlank } from './wing-blank/index';
 
 // yy component
 export { default as YyDateRangePicker } from './yy-date-range-picker/index';
+export { default as YyModal } from './yy-modal/index';
 export { default as DatePickere } from './yy-date-range-picker/DatePicker';
