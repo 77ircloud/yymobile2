@@ -6,7 +6,7 @@ title:
 ---
 
 ````jsx
-import { Icon, Grid } from 'yymobile';
+import { Icon, Grid } from 'antd-mobile';
 
 const Demo = () => {
   const size = ['xxs', 'xs', 'sm', 'md', 'lg'];
@@ -18,3 +18,5 @@ const Demo = () => {
 };
 ReactDOM.render(<Demo />, mountNode);
 ````
+
+

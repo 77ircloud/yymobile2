@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon as Icon_ } from 'antd-mobile';
-import GridProps from './PropsType';
+import classnames from 'classnames';
+import loadSprite from './loadSprite';
 
 export interface IconPropType {
   type: string;
@@ -11,12 +11,19 @@ export interface IconPropType {
 }
 
 export default class Icon extends React.Component<IconPropType, any> {
-
   static defaultProps = {
     size: 'md',
   };
-
+  componentDidMount() {
+    loadSprite();
+  }
   render() {
-    return <Icon_ {...this.props} />;
+    const { type, className, style, size, ...restProps } = this.props;
+    const iconClassName = classnames('yy-icon', `yy-icon-${type}`, `yy-icon-${size}`, className);
+    return (
+      <svg className={iconClassName} style={style} {...restProps}>
+        <use xlinkHref={`#${type}`} />
+      </svg>
+    );
   }
 }

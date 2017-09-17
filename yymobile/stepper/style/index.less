@@ -32,13 +32,16 @@
 
   &-handler {
     text-align: center;
-    border: @border-width-md solid @border-color-base;
-    border-radius: @radius-md;
+    // border: @border-width-md solid @border-color-base;
+    // border-radius: @radius-md;
+    border: 0 solid @border-color-base;
+    border-radius: @radius-circle;
     overflow: hidden;
     color: @color-text-base;
     position: absolute;
     display: inline-block;
     box-sizing: content-box;
+    background-color: @brand-primary;
 
     &-active {
       z-index: 2;
@@ -145,5 +148,12 @@
     .@{stepperPrefixCls}-input-wrap {
       opacity: @opacity-disabled;
     }
+  }
+
+  .am-icon-plus {
+    fill: #fff;
+  }
+  .am-icon-minus {
+    fill: #fff;
   }
 }
