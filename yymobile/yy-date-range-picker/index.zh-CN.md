@@ -13,4 +13,4 @@ subtitle: 时间范围选择
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| size       |  上下留白的间距，可选`xs`,`sm`,`md`,`lg`,`xl`  | string | `md`  |
+| onChange(startTime, endTime) | 改变时间时触发的函数   | function |   |

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'rc-dialog';
+import classnames from 'classnames';
 import createClass from 'create-react-class';
 import { IPopupPickerProps } from './PopupPickerTypes';
 import PopupMixin from './PopupMixin';
@@ -17,14 +18,14 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
   },
   getModal() {
     const props = this.props;
-    const { startTime, endTime } = this.state;
+    const { startTime, endTime, onStart } = this.state;
     let startTimeStr = '', endTimeStr = '', endTimeDate, startTimeDate;
     if (startTime) {
       startTimeDate = new Date(startTime);
       startTimeStr = startTimeDate.getFullYear() + '-' +
       (startTimeDate.getMonth() + 1) + '-' + startTimeDate.getDate();
     }
-    if (endTimeDate) {
+    if (endTime) {
       endTimeDate = new Date(endTime);
       endTimeStr = endTimeDate.getFullYear() + '-' +
       (endTimeDate.getMonth() + 1) + '-' + endTimeDate.getDate();
@@ -33,12 +34,22 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
       return null;
     }
     const { prefixCls } = props;
-    console.log(startTime)
+    const rangeStartCls = classnames({
+      [`${prefixCls}-range-item`]: true,
+      [`${prefixCls}-left`]: true,
+      [`${prefixCls}-range-active`]: onStart,
+    })
+    const rangeEndCls = classnames({
+      [`${prefixCls}-range-item`]: true,
+      [`${prefixCls}-right`]: true,
+      [`${prefixCls}-range-active`]: !onStart,
+    })
+    console.log('popup modal', onStart)
     return (
       <Modal
         prefixCls={`${prefixCls}`}
         className={props.className || ''}
-        visible
+        visible={true}
         closable={false}
         transitionName={props.transitionName || props.popupTransitionName}
         maskTransitionName={props.maskTransitionName}
@@ -48,13 +59,13 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
         <div>
           <div className={`${prefixCls}-range`}>
             <Touchable activeClassName={`${prefixCls}-start`}>
-              <div className={`${prefixCls}-range-item ${prefixCls}-left`} onClick={this.switchStart}>
+              <div className={rangeStartCls} onClick={this.switchStart}>
                 <p>开始时间</p>
                 <p>{startTimeStr}</p>
               </div>
             </Touchable>
             <Touchable activeClassName={`${prefixCls}-end`}>
-              <div className={`${prefixCls}-range-item ${prefixCls}-right`} onClick={this.switchEnd}>
+              <div className={rangeEndCls} onClick={this.switchEnd}>
                 <p>结束时间</p>
                 <p>{endTimeStr}</p>
               </div>

@@ -21,7 +21,7 @@ export default {
     return {
       pickerValue: 'value' in this.props ? this.props.value : null,
       visible: this.props.visible || false,
-      onStart: true,
+      onStart: false,
       startTime: null,
       endTime: null,
     };
@@ -39,16 +39,19 @@ export default {
   },
 
   onPickerChange(pickerValue) {
-    const { onStart } = this.state
+    const { onStart, startTime, endTime } = this.state
+    let endTimeVal, startTimeVal;
     console.log('onchange value', pickerValue)
     if (this.state.pickerValue !== pickerValue) {
 
       if (onStart) {
+        startTimeVal = pickerValue;
         this.setState({
           pickerValue,
           startTime: pickerValue,
         });
       } else {
+        endTimeVal = pickerValue;
         this.setState({
           pickerValue,
           endTime: pickerValue,
@@ -56,7 +59,7 @@ export default {
       }
       const { picker, pickerValueChangeProp } = this.props;
       if (picker && picker.props[pickerValueChangeProp]) {
-        picker.props[pickerValueChangeProp](pickerValue);
+        picker.props[pickerValueChangeProp](startTimeVal, endTimeVal);
       }
     }
   },
@@ -88,6 +91,7 @@ export default {
   getRender() {
     const props = this.props;
     const children = props.children;
+    console.log('get render', children)
     if (!children) {
       return this.getModal();
     }
