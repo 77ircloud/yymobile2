@@ -19,6 +19,7 @@ subtitle: 复选框
 | checked         |   指定当前是否选中   | Boolean  | 无  |
 | disabled        |         | Boolean |  false  |
 | onChange        | change 事件触发的回调函数 | (e: Object): void |   无  |
+| multiSelect     | 单选还是多选，true为多选   | Boolean | fale |
 
 ### Checkbox.CheckboxItem
 

@@ -10,9 +10,15 @@ export default class Checkbox extends React.Component<CheckboxProps, any> {
   static defaultProps = {
     prefixCls: 'yy-checkbox',
     wrapLabel: true,
+    multiSelect: false
   };
 
   render() {
-    return <Checkbox_ {...this.props} />;
+    let { prefixCls, className, multiSelect } = this.props
+    if (multiSelect) {
+      className = className + 'yy-checkbox-multi'
+    }
+
+    return <Checkbox_ {...this.props} className={className} />;
   }
 }

@@ -33,6 +33,9 @@ class Test extends React.Component {
         <CheckboxItem key="disabled" data-seed="logId" disabled defaultChecked multipleLine>
           undergraduate<List.Item.Brief>Auxiliary text</List.Item.Brief>
         </CheckboxItem>
+        <CheckboxItem prefixCls="yy-checkbox" key={666} multiSelect={true}>
+          multiSelect
+        </CheckboxItem>
       </List>
 
       <Flex>

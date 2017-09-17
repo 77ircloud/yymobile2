@@ -13,6 +13,7 @@
   font-size: @button-font-size;
   height: @button-height;
   line-height: @button-height;
+  border-radius: @button-height / 2;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -37,6 +38,7 @@
     color: @color-text-base-inverse;
     background-color: @primary-button-fill;
     .hairline('all', @primary-button-fill, @radius-md);
+    border-radius: @button-height / 2;
 
     &.@{buttonPrefixCls}-active {
       color: fade(@color-text-base-inverse, 30%);
@@ -52,6 +54,7 @@
     color: @ghost-button-color;
     background-color: transparent;
     .hairline('all', @ghost-button-color, @radius-md);
+    border-radius: @button-height / 2;
 
     &.@{buttonPrefixCls}-active {
       color: @ghost-button-fill-tap;
@@ -68,6 +71,8 @@
   &-warning {
     color: @color-text-base-inverse;
     background-color: @warning-button-fill;
+    border-radius: @button-height / 2;
+    border-radius: @button-height / 2;
 
     &.@{buttonPrefixCls}-active {
       color: fade(@color-text-base-inverse, 30%);
@@ -82,6 +87,7 @@
   &-inline {
     display: inline-block;
     padding: 0 @h-spacing-lg;
+    border-radius: @button-height / 2;
   }
 
   &-small {
@@ -89,12 +95,14 @@
     height: @button-height-sm;
     line-height: @button-height-sm;
     padding: 0 @h-spacing-lg;
+    border-radius: @button-height / 2;
   }
 
   &-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: @button-height / 2;
   }
 
   > .@{buttonPrefixCls}-icon {

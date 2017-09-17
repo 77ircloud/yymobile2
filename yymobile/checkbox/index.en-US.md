@@ -18,6 +18,8 @@ Properties | Descrition | Type | Default
 | checked         |  whether is checked now (Controlled Mode)   | Boolean  |   |
 | disabled        |  whether is been disabled       | Boolean |  false  |
 | onChange        | callback when check status is changed | (e: Object): void |     |
+| multiSelect     | 单选还是多选，true为多选   | Boolean | fale |
+
 
 ### Checkbox.CheckboxItem
 
