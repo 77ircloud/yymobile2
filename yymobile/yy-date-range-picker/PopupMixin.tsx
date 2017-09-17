@@ -7,10 +7,10 @@ export default {
   getDefaultProps() {
     return {
       onVisibleChange: noop,
-      okText: 'Ok',
+      okText: '确定',
       pickerValueProp: 'selectedValue',
       pickerValueChangeProp: 'onValueChange',
-      dismissText: 'Dismiss',
+      dismissText: '取消',
       title: '',
       onOk: noop,
       onDismiss: noop,
@@ -21,6 +21,9 @@ export default {
     return {
       pickerValue: 'value' in this.props ? this.props.value : null,
       visible: this.props.visible || false,
+      onStart: true,
+      startTime: null,
+      endTime: null,
     };
   },
 
@@ -36,10 +39,21 @@ export default {
   },
 
   onPickerChange(pickerValue) {
+    const { onStart } = this.state
+    console.log('onchange value', pickerValue)
     if (this.state.pickerValue !== pickerValue) {
-      this.setState({
-        pickerValue,
-      });
+
+      if (onStart) {
+        this.setState({
+          pickerValue,
+          startTime: pickerValue,
+        });
+      } else {
+        this.setState({
+          pickerValue,
+          endTime: pickerValue,
+        });
+      }
       const { picker, pickerValueChangeProp } = this.props;
       if (picker && picker.props[pickerValueChangeProp]) {
         picker.props[pickerValueChangeProp](pickerValue);
@@ -127,4 +141,16 @@ export default {
   hide() {
     this.fireVisibleChange(false);
   },
+  switchStart() {
+    console.log('switchStart');
+    this.setState({
+      onStart: true
+    })
+  },
+  switchEnd() {
+    console.log('switchEnd');
+    this.setState({
+      onStart: false
+    })
+  }
 };
