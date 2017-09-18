@@ -18,17 +18,15 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
 
   static DatePicker = DatePicker;
 
-  onOk = (v) => {
-    const { onChange, onOk } = this.props;
-    if (onChange) {
-      onChange(v);
-    }
+  onOk = (startTime, endTime) => {
+    const { onOk } = this.props;
     if (onOk) {
-      onOk(v);
+      onOk(startTime, endTime);
     }
   }
 
   render() {
+    console.log('PopupPicker')
     return (<PopupPicker
       picker={this.props.datePicker}
       value={this.props.date}
@@ -36,11 +34,6 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
       onOk={this.onOk}
     />);
   }
-  // render() {
-  //   return (
-  //     <div>3333333</div>
-  //   )
-  // }
 }
 
 export default YyDateRangePicker;

@@ -66,11 +66,11 @@ class Demo extends React.Component<any, any> {
     };
   }
 
-  onChange = (date) => {
-    console.log('onChange', format(date));
-    this.setState({
+  onChange = (startTime, endTime) => {
+    console.log('onChange', startTime, endTime);
+    /*this.setState({
       date,
-    });
+    });*/
   }
 
   onDismiss = () => {
@@ -79,6 +79,10 @@ class Demo extends React.Component<any, any> {
 
   show = () => {
     console.log('my click');
+  }
+
+  onOk = (startTime, endTime) => {
+    console.log('onOK', startTime, endTime)
   }
 
   render() {
@@ -92,6 +96,7 @@ class Demo extends React.Component<any, any> {
         defaultDate={now}
         mode={props.mode}
         locale={props.locale}
+        onDateChange={this.onChange}
       />
     );
     return (<div style={{ margin: '10px 30px' }}>
@@ -104,7 +109,7 @@ class Demo extends React.Component<any, any> {
           title="Date picker"
           date={date}
           onDismiss={this.onDismiss}
-          onChange={this.onChange}
+          onOk={this.onOk}
         >
           <button onClick={this.show}>{date && format(date) || 'open'}</button>
         </YyDateRangePicker>

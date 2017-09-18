@@ -44,7 +44,6 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
       [`${prefixCls}-right`]: true,
       [`${prefixCls}-range-active`]: !onStart,
     })
-    console.log('popup modal', onStart)
     return (
       <Modal
         prefixCls={`${prefixCls}`}
