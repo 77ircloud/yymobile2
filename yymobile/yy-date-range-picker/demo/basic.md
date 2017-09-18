@@ -55,7 +55,7 @@ const zhCn = {
 
 class Demo extends React.Component<any, any> {
   static defaultProps = {
-    mode: 'datetime',
+    mode: 'date',
     locale: zhCn,
   };
 
@@ -88,28 +88,23 @@ class Demo extends React.Component<any, any> {
   render() {
     const props = this.props;
     const { date } = this.state;
-    const datePicker = (
-      <DatePickere
-        rootNativeProps={{'data-xx': 'yy'}}
-        minDate={minDate}
-        maxDate={maxDate}
-        defaultDate={now}
-        mode={props.mode}
-        locale={props.locale}
-        onDateChange={this.onChange}
-      />
-    );
     return (<div style={{ margin: '10px 30px' }}>
       <h2>popup date picker</h2>
       <div>
         <YyDateRangePicker
-          datePicker={datePicker}
           transitionName="yyc-picker-popup-slide-fade"
           maskTransitionName="yyc-picker-popup-fade"
           title="Date picker"
           date={date}
           onDismiss={this.onDismiss}
           onOk={this.onOk}
+          rootNativeProps={{'data-xx': 'yy'}}
+          minDate={minDate}
+          maxDate={maxDate}
+          defaultDate={now}
+          mode={props.mode}
+          locale={props.locale}
+          onDateChange={this.onChange}
         >
           <button onClick={this.show}>{date && format(date) || 'open'}</button>
         </YyDateRangePicker>
