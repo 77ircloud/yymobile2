@@ -99,8 +99,8 @@ class Demo extends React.Component<any, any> {
       <div>
         <YyDateRangePicker
           datePicker={datePicker}
-          transitionName="rmc-picker-popup-slide-fade"
-          maskTransitionName="rmc-picker-popup-fade"
+          transitionName="yyc-picker-popup-slide-fade"
+          maskTransitionName="yyc-picker-popup-fade"
           title="Date picker"
           date={date}
           onDismiss={this.onDismiss}
