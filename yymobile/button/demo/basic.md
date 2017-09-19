@@ -14,6 +14,7 @@ import { WhiteSpace, WingBlank } from 'antd-mobile';
 /* eslint global-require: 0 */
 const ButtonExample = () => (
   <WingBlank>
+    <Button size="xxs">xxs</Button><WhiteSpace />
     <Button>default</Button><WhiteSpace />
     <Button disabled>default disabled</Button><WhiteSpace />
 
