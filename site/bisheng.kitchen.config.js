@@ -35,8 +35,8 @@ module.exports = Object.assign({}, commonConfig, {
       组合组件: 6,
       Other: 7,
       其他: 7,
-      YY: 8,
-      YY: 8,
+      YYMobile: 8,
+      铱云组件: 8,
     },
     cateChinese: {
       Layout: '布局',
@@ -47,7 +47,7 @@ module.exports = Object.assign({}, commonConfig, {
       Gesture: '手势',
       Combination: '组合组件',
       Other: '其他',
-      YY: 'YY',
+      YYMobile: '铱云组件',
     },
   },
   doraConfig: {

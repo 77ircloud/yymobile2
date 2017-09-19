@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Layout
+type: YYMobile
 title: YYDateRangePicker
 subtitle: 时间范围选择
 ---

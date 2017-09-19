@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Navigation
+type: YYMobile
 title: YyBar
 subtitle: 导航栏
 ---
