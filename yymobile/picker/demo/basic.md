@@ -9,7 +9,7 @@ title:
 
 ````jsx
 import { Picker } from 'yymobile';
-import { List, WhiteSpace } from 'antd-mobile';
+import { List, WhiteSpace } from 'yymobile';
 import { createForm } from 'rc-form';
 import arrayTreeFilter from 'array-tree-filter';
 

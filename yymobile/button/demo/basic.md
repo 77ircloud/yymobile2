@@ -9,7 +9,7 @@ button
 
 ````jsx
 import { Button } from 'yymobile';
-import { WhiteSpace, WingBlank } from 'antd-mobile';
+import { WhiteSpace, WingBlank } from 'yymobile';
 
 /* eslint global-require: 0 */
 const ButtonExample = () => (

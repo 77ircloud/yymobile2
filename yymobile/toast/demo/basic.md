@@ -8,7 +8,7 @@ title:
 text、icon、success、failure、offline、loading
 
 ````jsx
-import { WhiteSpace, WingBlank } from 'antd-mobile';
+import { WhiteSpace, WingBlank } from 'yymobile';
 import { Toast, Button } from 'yymobile';
 
 function showToast() {

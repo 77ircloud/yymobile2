@@ -8,7 +8,7 @@ title:
 
 ````jsx
 import { List, Radio, Flex } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const RadioItem = Radio.RadioItem;
 
@@ -45,7 +45,7 @@ class Test extends React.Component {
     return (<div>
       <List renderHeader={() => 'RadioItem Demo'}>
         {data.map(i => (
-          <RadioItem key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
+          <RadioItem prefixCl="yy-radio" key={i.value} checked={value === i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
           </RadioItem>
         ))}

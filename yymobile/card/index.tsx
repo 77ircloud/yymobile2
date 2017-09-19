@@ -1,18 +1,10 @@
-import React from 'react';
-import { Card as Card_} from 'antd-mobile';
-import CardProps from './PropsType';
+import CardHeader from "./CardHeader";
+import CardBody from "./CardBody";
+import CardFooter from "./CardFooter";
+import Card from "./Card";
 
-export default class Card extends React.Component<CardProps, any> {
+Card.Header = CardHeader;
+Card.Body = CardBody;
+Card.Footer = CardFooter;
 
-  static Header = Card_.CardHeader;
-  static Body = Card_.CardBody;
-  static Footer = Card_.CardFooter;
-
-  static defaultProps = {
-    prefixCls: 'yy-card',
-  };
-
-  render() {
-    return <Card_ {...this.props} />;
-  }
-}
+export default Card;

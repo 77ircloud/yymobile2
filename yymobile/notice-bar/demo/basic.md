@@ -8,7 +8,7 @@ title:
 
 ````jsx
 import { NoticeBar } from 'yymobile';
-import { WhiteSpace, Icon } from 'antd-mobile';
+import { WhiteSpace, Icon } from 'yymobile';
 
 const NoticeBarExample = () => (
   <div>

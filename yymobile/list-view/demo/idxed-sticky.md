@@ -11,7 +11,7 @@ sticky index List
 ````jsx
 import { ListView, List } from 'yymobile';
 import { province as provinceData } from 'antd-mobile-demo-data';
-import { SearchBar } from 'antd-mobile';
+import { SearchBar } from 'yymobile';
 
 const { Item } = List;
 

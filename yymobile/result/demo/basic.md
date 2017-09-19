@@ -8,7 +8,7 @@ title:
 ````jsx
 /* eslint global-require: 0 */
 import { Result, Icon } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const customIcon = src => <img src={src} className="icon am-icon am-icon-md" alt="icon" />;
 

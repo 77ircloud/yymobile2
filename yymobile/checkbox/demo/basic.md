@@ -8,7 +8,7 @@ title:
 
 ````jsx
 import { Checkbox } from 'yymobile';
-import { List, Flex } from 'antd-mobile';
+import { List, Flex } from 'yymobile';
 
 const CheckboxItem = Checkbox.CheckboxItem;
 const AgreeItem = Checkbox.AgreeItem;

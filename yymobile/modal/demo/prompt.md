@@ -15,7 +15,7 @@ Including normal text input modal, password input modal and login information in
 
 ````jsx
 import { Modal } from 'yymobile';
-import { Button, WingBlank, WhiteSpace, Toast } from 'antd-mobile';
+import { Button, WingBlank, WhiteSpace, Toast } from 'yymobile';
 
 const prompt = Modal.prompt;
 

@@ -9,7 +9,7 @@ title:
 ````jsx
 /* eslint global-require: 0 */
 import { Steps } from 'yymobile';
-import { WingBlank, WhiteSpace } from 'antd-mobile';
+import { WingBlank, WhiteSpace } from 'yymobile';
 
 const Step = Steps.Step;
 

@@ -15,7 +15,7 @@ Basic Modal.
 
 ````jsx
 import { Modal } from 'yymobile';
-import { List, Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import { List, Button, WhiteSpace, WingBlank } from 'yymobile';
 
 class App extends React.Component {
   constructor(props) {

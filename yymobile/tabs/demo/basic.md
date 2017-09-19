@@ -10,7 +10,7 @@ Basic Usage.
 
 ````jsx
 import { Tabs, Badge } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const tabs = [
   { title: <Badge text={'3'}>First Tab</Badge> },

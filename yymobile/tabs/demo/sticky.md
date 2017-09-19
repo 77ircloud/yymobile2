@@ -9,7 +9,7 @@ use react-sticky
 
 ````jsx
 import { Tabs } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 function renderTabBar(props) {

@@ -15,7 +15,7 @@ Default Card
 
 ````jsx
 import { Card } from 'yymobile';
-import { WingBlank, WhiteSpace } from 'antd-mobile';
+import { WingBlank, WhiteSpace } from 'yymobile';
 
 ReactDOM.render(
   <WingBlank size="lg">

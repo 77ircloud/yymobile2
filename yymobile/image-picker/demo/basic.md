@@ -6,7 +6,7 @@ title:
 ---
 
 ````jsx
-import { ImagePicker } from 'antd-mobile';
+import { ImagePicker } from 'yymobile';
 
 const data = [{
   url: 'https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg',

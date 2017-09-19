@@ -9,7 +9,7 @@ Form Collection. (Use [rc-form](https://github.com/react-component/form) to vali
 
 ````jsx
 import { List } from 'yymobile';
-import { InputItem, Switch, Stepper, Range, Button } from 'antd-mobile';
+import { InputItem, Switch, Stepper, Range, Button } from 'yymobile';
 import { createForm } from 'rc-form';
 
 const Item = List.Item;

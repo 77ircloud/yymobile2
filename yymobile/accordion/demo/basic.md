@@ -9,7 +9,7 @@ Accordion
 
 ````jsx
 import { Accordion } from 'yymobile';
-import { List } from 'antd-mobile';
+import { List } from 'yymobile';
 
 class AccordionExmple extends React.Component {
   onChange = (key) => {

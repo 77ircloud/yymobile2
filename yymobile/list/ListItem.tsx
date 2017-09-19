@@ -12,8 +12,13 @@ export class Brief extends React.Component<BriefProps, any> {
 
 export default class ListItem extends React.Component<ListItemProps, any> {
 
-  static defaultProps = {
+  static defaultProps: Partial<ListItemProps> = {
     prefixCls: 'yy-list',
+    align: 'middle',
+    error: false,
+    multipleLine: false,
+    wrap: false,
+    platform: 'ios',
   };
 
   static Brief = Brief;

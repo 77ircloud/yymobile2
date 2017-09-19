@@ -9,7 +9,7 @@ export class DefaultTabBar extends React.PureComponent<any, any> {
   }
 
   render() {
-    return <Tabs_.DefaultTabBar {...this.props} />;
+    return <Tabs_.DefaultTabBar {...this.props} prefixCls="yy-tabs-default-bar" />;
   }
 }
 

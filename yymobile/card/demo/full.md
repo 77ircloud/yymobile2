@@ -16,7 +16,7 @@ Full Column Card
 
 ````jsx
 import { Card } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 ReactDOM.render(
   <div>

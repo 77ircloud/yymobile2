@@ -9,7 +9,7 @@ title:
 ````jsx
 /* eslint global-require: 0 */
 import { ActionSheet } from 'yymobile';
-import { Button, Toast } from 'antd-mobile';
+import { Button, Toast } from 'yymobile';
 
 // fix touch to scroll background page on iOS
 // https://github.com/ant-design/ant-design-mobile/issues/307

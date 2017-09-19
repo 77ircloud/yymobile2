@@ -14,7 +14,7 @@ title:
 Usage cases.
 
 ````jsx
-import { List, Badge } from 'antd-mobile';
+import { List, Badge } from 'yymobile';
 
 const BadgeDemo = () => (
   <List>

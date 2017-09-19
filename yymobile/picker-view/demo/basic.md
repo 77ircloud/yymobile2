@@ -6,7 +6,7 @@ title:
 ---
 
 ````jsx
-import { PickerView } from 'antd-mobile';
+import { PickerView } from 'yymobile';
 
 const seasons = [
   [

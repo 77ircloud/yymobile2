@@ -7,7 +7,7 @@ title:
 
 ````jsx
 import { Calendar } from 'yymobile';
-import { List, Switch } from 'antd-mobile';
+import { List, Switch } from 'yymobile';
 import enUS from 'antd-mobile/lib/calendar/locale/en_US';
 import zhCN from 'antd-mobile/lib/calendar/locale/zh_CN';
 

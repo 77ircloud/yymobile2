@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tsPropsType from './PropsType';
-import { Calendar as RMCalendar } from 'rmc-calendar';
 import { getComponentLocale } from '../_util/getLocale';
+import { Calendar as Calendar_} from "antd-mobile";
 
 export default class Calendar extends React.Component<tsPropsType, any> {
   static defaultProps = {
@@ -16,14 +16,9 @@ export default class Calendar extends React.Component<tsPropsType, any> {
   };
 
   render() {
-    const { props, context } = this;
-    const locale = getComponentLocale(props, context, 'Calendar', () => require('./locale/zh_CN'));
 
     return (
-      <RMCalendar
-        locale={locale}
-        {...props}
-      />
+      <Calendar_ {...this.props} />
     );
   }
 }

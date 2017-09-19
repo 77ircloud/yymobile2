@@ -9,7 +9,7 @@ Basic usage
 
 ````jsx
 import { ActivityIndicator } from 'yymobile';
-import { WingBlank, WhiteSpace, Button } from 'antd-mobile';
+import { WingBlank, WhiteSpace, Button } from 'yymobile';
 
 class App extends React.Component {
   constructor(props) {

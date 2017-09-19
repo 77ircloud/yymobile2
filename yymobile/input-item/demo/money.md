@@ -15,7 +15,7 @@ Recommended use of [rc-form ](https://github.com/react-component/form) for contr
 
 ````jsx
 import { InputItem } from 'yymobile';
-import { List, Button } from 'antd-mobile';
+import { List, Button } from 'yymobile';
 import { createForm } from 'rc-form';
 
 class H5NumberInputExample extends React.Component {

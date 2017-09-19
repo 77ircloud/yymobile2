@@ -7,7 +7,7 @@ examples with List / Flex
 
 ````jsx
 import { Button } from 'yymobile';
-import { List } from 'antd-mobile';
+import { List } from 'yymobile';
 
 const ComplexButtonDemo = () => (
   <List style={{ margin: '5px 0', backgroundColor: 'white' }}>

@@ -16,7 +16,7 @@ Basic use of Flex
 
 ````jsx
 import { Flex } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const PlaceHolder = props => (
   <div

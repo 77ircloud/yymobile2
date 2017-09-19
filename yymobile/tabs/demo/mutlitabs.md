@@ -10,7 +10,7 @@ There are at most 5 tab panes in the visible area, click on the both sides of `T
 
 ````jsx
 import { Tabs } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const data = [
   {

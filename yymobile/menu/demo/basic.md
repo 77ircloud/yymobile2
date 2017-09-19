@@ -8,7 +8,7 @@ title:
 ````jsx
 /* eslint global-require:0, no-nested-ternary:0 */
 import { Menu } from 'yymobile';
-import { ActivityIndicator, NavBar } from 'antd-mobile';
+import { ActivityIndicator, NavBar } from 'yymobile';
 
 const data = [
   {

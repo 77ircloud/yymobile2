@@ -16,7 +16,7 @@ Docked in document
 
 ````jsx
 import { Drawer } from 'yymobile';
-import { List, NavBar } from 'antd-mobile';
+import { List, NavBar } from 'yymobile';
 
 class App extends React.Component {
   state = {

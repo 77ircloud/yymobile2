@@ -15,7 +15,7 @@ Recommended use of [rc-form ](https://github.com/react-component/form) for contr
 
 ````jsx
 import { InputItem } from 'yymobile';
-import { List, WhiteSpace } from 'antd-mobile';
+import { List, WhiteSpace } from 'yymobile';
 import { createForm } from 'rc-form';
 
 class BasicInputExample extends React.Component {
@@ -29,7 +29,7 @@ class BasicInputExample extends React.Component {
     const { getFieldProps } = this.props.form;
     return (
       <div>
-        <List renderHeader={() => 'Customize to focus'}>
+        <List renderHeader={() => 'Customize to focus'} prefixCls="yy-list">
           <InputItem
             {...getFieldProps('autofocus')}
             clear
@@ -42,7 +42,7 @@ class BasicInputExample extends React.Component {
             placeholder="click the button below to focus"
             ref={el => this.customFocusInst = el}
           >标题</InputItem>
-          <List.Item>
+          <List.Item prefixCls="yy-list">
             <div
               style={{ width: '100%', color: '#108ee9', textAlign: 'center' }}
               onClick={this.handleClick}
@@ -52,7 +52,7 @@ class BasicInputExample extends React.Component {
           </List.Item>
         </List>
 
-        <List renderHeader={() => 'Whether is controlled'}>
+        <List renderHeader={() => 'Whether is controlled'} prefixCls="yy-list">
           <InputItem
             {...getFieldProps('control')}
             placeholder="Hello World"
@@ -65,7 +65,7 @@ class BasicInputExample extends React.Component {
 
         <WhiteSpace />
 
-        <List renderHeader={() => 'click label to focus input'}>
+        <List renderHeader={() => 'click label to focus input'} prefixCls="yy-list">
           <InputItem
             placeholder="click label to focus input"
             ref={el => this.labelFocusInst = el}

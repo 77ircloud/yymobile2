@@ -11,7 +11,7 @@ When using `Carousel` in web projects, you may have problem about how to deal wi
 
 ````jsx
 import { Carousel } from 'yymobile';
-import { WhiteSpace, WingBlank } from 'antd-mobile';
+import { WhiteSpace, WingBlank } from 'yymobile';
 
 class App extends React.Component {
   state = {

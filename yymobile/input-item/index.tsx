@@ -6,6 +6,7 @@ export default class InputItem extends React.Component<InputItemProps, any> {
 
   static defaultProps = {
     prefixCls: 'yy-input',
+    prefixListCls: 'yy-list'
   };
 
   render() {

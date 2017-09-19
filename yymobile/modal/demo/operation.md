@@ -15,7 +15,7 @@ Modal with operations.
 
 ````jsx
 import { Modal } from 'yymobile';
-import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import { Button, WhiteSpace, WingBlank } from 'yymobile';
 
 const operation = Modal.operation;
 

@@ -9,7 +9,7 @@ title:
 
 ````jsx
 import { Tabs } from 'yymobile';
-import { WhiteSpace } from 'antd-mobile';
+import { WhiteSpace } from 'yymobile';
 
 const tabs = [
   { title: 'First Tab' },
