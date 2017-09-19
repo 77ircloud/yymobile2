@@ -59,14 +59,14 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
           <div className={`${prefixCls}-range`}>
             <Touchable activeClassName={`${prefixCls}-start`}>
               <div className={rangeStartCls} onClick={this.switchStart}>
-                <p>开始时间</p>
-                <p>{startTimeStr}</p>
+                <p className={`${prefixCls}-range-title`}>开始时间</p>
+                <p className={`${prefixCls}-range-time`}>{startTimeStr}</p>
               </div>
             </Touchable>
             <Touchable activeClassName={`${prefixCls}-end`}>
               <div className={rangeEndCls} onClick={this.switchEnd}>
-                <p>结束时间</p>
-                <p>{endTimeStr}</p>
+                <p className={`${prefixCls}-range-title`}>结束时间</p>
+                <p className={`${prefixCls}-range-time`}>{endTimeStr}</p>
               </div>
             </Touchable>
           </div>

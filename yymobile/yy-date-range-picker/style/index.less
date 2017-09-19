@@ -16,8 +16,8 @@
   background-color: #fff;
 
   &-range {
-    background-image: -webkit-linear-gradient(top, #e7e7e7, #e7e7e7, transparent, transparent);
-    background-image: linear-gradient(to bottom, #e7e7e7, #e7e7e7, transparent, transparent);
+    // background-image: -webkit-linear-gradient(top, #e7e7e7, #e7e7e7, transparent, transparent);
+    // background-image: linear-gradient(to bottom, #e7e7e7, #e7e7e7, transparent, transparent);
     background-position: bottom;
     background-size: 100% 1px;
     background-repeat: no-repeat;
@@ -29,8 +29,8 @@
       padding-right: 15px;
     }
     &-item {
-      color: #b3b3b3;
-      font-size: 18px;
+      color: @color-c1;
+      // font-size: 18px;
       height: 60px;
       width: 50%;
       line-height: 0;
@@ -39,9 +39,29 @@
       // flex: 1;
       text-align: center;
       -webkit-tap-highlight-color: transparent;
+      padding: 8px;
+      margin: 0 30px;
+    }
+    &-title {
+      font-size: 14px;
+      line-height: 0;
+      color: @color-c2;
+    }
+    &-time {
+      color: @color-c1;
+      font-size: 16px;
+      line-height: 0;
+      opacity: .5;
     }
     &-active {
-      color: #0ae;
+      border-bottom: 1px solid @color-c3;
+      .@{popupPickerPrefixCls}-range-title {
+        color: @color-c1;
+      }
+      .@{popupPickerPrefixCls}-range-time {
+        color: @color-c1;
+        opacity: 1;
+      }
     }
   }
 
@@ -82,7 +102,7 @@
     // align-items: center;
     background-image: -webkit-linear-gradient(top, #e7e7e7, #e7e7e7, transparent, transparent);
     background-image: linear-gradient(to bottom, #e7e7e7, #e7e7e7, transparent, transparent);
-    background-position: bottom;
+    background-position: top;
     background-size: 100% 1px;
     background-repeat: no-repeat;
     position: relative;
@@ -92,10 +112,15 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    &-left {
+      color: @color-c2;
+    }
+    &-right {
+      color: @color-c1;
+    }
   }
 
   &-item {
-    color: #0ae;
     font-size: 18px;
     height: 44px;
     line-height: 44px;

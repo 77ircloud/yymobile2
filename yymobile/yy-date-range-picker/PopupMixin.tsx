@@ -146,13 +146,17 @@ export default {
     this.fireVisibleChange(false);
   },
   switchStart() {
+    const { startTime, pickerValue } = this.state;
     this.setState({
-      onStart: true
+      onStart: true,
+      pickerValue: startTime ? startTime : pickerValue
     })
   },
   switchEnd() {
+    const { endTime, pickerValue } = this.state;
     this.setState({
-      onStart: false
+      onStart: false,
+      pickerValue: endTime ? endTime : pickerValue
     })
   }
 };
