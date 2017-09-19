@@ -48,6 +48,7 @@ class YyButton extends React.Component<ButtonProps, any> {
       [`${prefixCls}-ghost`]: type === 'ghost',
       [`${prefixCls}-warning`]: type === 'warning',
       [`${prefixCls}-small`]: size === 'small',
+      [`${prefixCls}-lg`]: size === 'lg',
       [`${prefixCls}-inline`]: inline,
       [`${prefixCls}-disabled`]: disabled,
       [`${prefixCls}-loading`]: loading,

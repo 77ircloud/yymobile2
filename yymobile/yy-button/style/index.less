@@ -1,8 +1,8 @@
 @import '../../style/mixins';
 @import '../../style/themes/default';
-@buttonPrefixCls: yy-yybutton;
+@yyButtonPrefixCls: yy-yybutton;
 
-.@{buttonPrefixCls} {
+.@{yyButtonPrefixCls} {
   // do not use width:100%, can not set margin
   display: block;
   outline: 0 none;
@@ -13,6 +13,7 @@
   font-size: @button-font-size;
   height: @button-height;
   line-height: @button-height;
+  border-radius: @button-height / 2;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -22,8 +23,7 @@
   // default
   color: @color-text-base;
   background-color: @fill-base;
-
-  .hairline('all', @border-color-base, @radius-md);
+  border: 1px solid #ddd;
 
   &&-active {
     background-color: @fill-tap;
@@ -36,13 +36,12 @@
   &-primary {
     color: @color-text-base-inverse;
     background-color: @primary-button-fill;
-    .hairline('all', @primary-button-fill, @radius-md);
 
-    &.@{buttonPrefixCls}-active {
+    &.@{yyButtonPrefixCls}-active {
       color: fade(@color-text-base-inverse, 30%);
       background-color: @primary-button-fill-tap;
     }
-    &.@{buttonPrefixCls}-disabled {
+    &.@{yyButtonPrefixCls}-disabled {
       color: fade(@color-text-base-inverse, 60%);
       opacity: 0.4;
     }
@@ -51,14 +50,13 @@
   &-ghost {
     color: @ghost-button-color;
     background-color: transparent;
-    .hairline('all', @ghost-button-color, @radius-md);
 
-    &.@{buttonPrefixCls}-active {
+    &.@{yyButtonPrefixCls}-active {
       color: @ghost-button-fill-tap;
       background-color: transparent;
       .hairline('all', @ghost-button-fill-tap, @radius-md);
     }
-    &.@{buttonPrefixCls}-disabled {
+    &.@{yyButtonPrefixCls}-disabled {
       color: fade(@color-text-base, 10%);
       .hairline('all', fade(@color-text-base, 10%), @radius-md);
       opacity: 1; // override default opacity: 0.6
@@ -69,11 +67,11 @@
     color: @color-text-base-inverse;
     background-color: @warning-button-fill;
 
-    &.@{buttonPrefixCls}-active {
+    &.@{yyButtonPrefixCls}-active {
       color: fade(@color-text-base-inverse, 30%);
       background-color: @warning-button-fill-tap;
     }
-    &.@{buttonPrefixCls}-disabled {
+    &.@{yyButtonPrefixCls}-disabled {
       color: fade(@color-text-base-inverse, 60%);
       opacity: 0.4;
     }
@@ -89,6 +87,15 @@
     height: @button-height-sm;
     line-height: @button-height-sm;
     padding: 0 @h-spacing-lg;
+    border-radius: @button-height-sm / 2;
+  }
+
+  &-lg {
+    font-size: @button-font-size-lg;
+    height: @button-height-lg;
+    line-height: @button-height-lg;
+    padding: 0 @h-spacing-lg;
+    border-radius: @button-height-lg / 2;
   }
 
   &-icon {
@@ -97,7 +104,7 @@
     justify-content: center;
   }
 
-  > .@{buttonPrefixCls}-icon {
+  > .@{yyButtonPrefixCls}-icon {
     margin-right: 0.5em;
   }
 }

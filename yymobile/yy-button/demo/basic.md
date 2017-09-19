@@ -13,6 +13,7 @@ import { YyButton, WhiteSpace, WingBlank } from 'yymobile';
 /* eslint global-require: 0 */
 const YyButtonExample = () => (
   <WingBlank>
+    <YyButton size="lg">lg</YyButton><WhiteSpace />
     <YyButton>default</YyButton><WhiteSpace />
     <YyButton disabled>default disabled</YyButton><WhiteSpace />
 
