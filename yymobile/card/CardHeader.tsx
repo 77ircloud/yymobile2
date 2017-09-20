@@ -11,7 +11,7 @@ export default class CardHeader extends React.Component <CardHeaderProps, any> {
 
   render() {
     return (
-      <Card_.CardHeader {...this.props} />
+      <Card_.Header {...this.props} />
     );
   }
 }

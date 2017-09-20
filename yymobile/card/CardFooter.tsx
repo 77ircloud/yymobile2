@@ -10,7 +10,7 @@ export default class CardFooter extends React.Component <CardFooterProps, any> {
 
   render() {
     return (
-      <Card_.CardFooter {...this.props} />
+      <Card_.Footer {...this.props} />
     );
   }
 }

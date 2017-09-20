@@ -10,7 +10,7 @@ export default class CardBody extends React.Component<CardBodyProps, any> {
 
   render() {
     return (
-      <Card_.CardBody {...this.props} />
+      <Card_.Body {...this.props} />
     );
   }
 }
