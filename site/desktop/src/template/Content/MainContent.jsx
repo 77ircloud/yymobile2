@@ -26,7 +26,7 @@ function getModuleData(props) {
   //   moduleName === 'yymobile' ? [...props.picked.yymobile] : props.picked[moduleName];
   if (moduleName === 'components' || moduleName.includes('changelog') || moduleName === 'docs/react')
   {
-    moduleData = [...props.picked.components, ...props.picked.yymobile, ...props.picked['docs/react'], ...props.picked.changelog].filter(item => item.meta.filename.includes(this.context.intl.locale))
+    moduleData = [...props.picked.components, ...props.picked.yymobile, ...props.picked['docs/react'], ...props.picked.changelog]
   } else if (moduleName === 'yymobile' || moduleName === 'docs/yymobile') {
     moduleData = [...props.picked.yymobile, ...props.picked['docs/yymobile'], ...props.picked.changelog]
   } else {
@@ -148,7 +148,7 @@ export default class MainContent extends React.Component {
     //   moduleName === 'yymobile' ? [...props.picked.yymobile] : props.picked[moduleName];
     if (moduleName === 'components' || moduleName.includes('changelog') || moduleName === 'docs/react')
     {
-      moduleData = [...props.picked.components, ...props.picked.yymobile, ...props.picked['docs/react'], ...props.picked.changelog].filter(item => item.meta.filename.includes(this.context.intl.locale))
+      moduleData = [...props.picked.components, ...props.picked.yymobile, ...props.picked['docs/react'], ...props.picked.changelog]
     } else if (moduleName === 'yymobile' || moduleName === 'docs/yymobile') {
       moduleData = [...props.picked.yymobile, ...props.picked['docs/yymobile'], ...props.picked.changelog]
     } else {
