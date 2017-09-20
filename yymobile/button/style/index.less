@@ -24,7 +24,7 @@
   color: @color-text-base;
   background-color: @fill-base;
 
-  .hairline('all', @border-color-base, @radius-md);
+  border: 1px solid #ddd;
 
   &&-active {
     background-color: @fill-tap;
@@ -37,7 +37,7 @@
   &-primary {
     color: @color-text-base-inverse;
     background-color: @primary-button-fill;
-    .hairline('all', @primary-button-fill, @radius-md);
+    border: 1px solid #ddd;
     border-radius: @button-height / 2;
 
     &.@{buttonPrefixCls}-active {
@@ -53,17 +53,17 @@
   &-ghost {
     color: @ghost-button-color;
     background-color: transparent;
-    .hairline('all', @ghost-button-color, @radius-md);
+    border: 1px solid #ddd;
     border-radius: @button-height / 2;
 
     &.@{buttonPrefixCls}-active {
       color: @ghost-button-fill-tap;
       background-color: transparent;
-      .hairline('all', @ghost-button-fill-tap, @radius-md);
+      border: 1px solid #ddd;
     }
     &.@{buttonPrefixCls}-disabled {
       color: fade(@color-text-base, 10%);
-      .hairline('all', fade(@color-text-base, 10%), @radius-md);
+      border: 1px solid #ddd;
       opacity: 1; // override default opacity: 0.6
     }
   }

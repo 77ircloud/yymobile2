@@ -1,6 +1,6 @@
-.@{modalPrefixClass} {
+.@{yyModalPrefixClass} {
   position: relative;
-  &:not(.@{modalPrefixClass}-transparent):not(.@{modalPrefixClass}-popup) {
+  &:not(.@{yyModalPrefixClass}-transparent):not(.@{yyModalPrefixClass}-popup) {
     width: 100%;
     height: 100%;
   }
@@ -55,12 +55,12 @@
 
   &&-transparent {
     width: 270 * @hd;
-    .@{modalPrefixClass}-content {
+    .@{yyModalPrefixClass}-content {
       border-radius: @radius-lg;
       height: auto;
       padding-top: @v-spacing-lg;
 
-      .@{modalPrefixClass}-body {
+      .@{yyModalPrefixClass}-body {
         padding: 0 @h-spacing-lg @v-spacing-lg;
       }
     }

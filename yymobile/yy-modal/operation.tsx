@@ -8,7 +8,7 @@ export default function operation(
   platform = 'ios',
 ) {
 
-  const prefixCls = 'am-modal';
+  const prefixCls = 'yy-yymodal';
   let div: any = document.createElement('div');
   document.body.appendChild(div);
 

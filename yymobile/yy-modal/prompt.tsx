@@ -15,7 +15,7 @@ export default function prompt(
     };
   }
 
-  const prefixCls = 'yy-modal';
+  const prefixCls = 'yy-yymodal';
 
   let data: any = {};
 

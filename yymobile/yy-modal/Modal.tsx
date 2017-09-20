@@ -6,7 +6,7 @@ import TouchFeedback from 'rmc-feedback';
 
 export default class Modal extends ModalComponent<ModalProps, any> {
   static defaultProps = {
-    prefixCls: 'yy-modal',
+    prefixCls: 'yy-yymodal',
     transparent: false,
     popup: false,
     animationType: 'slide-down',
