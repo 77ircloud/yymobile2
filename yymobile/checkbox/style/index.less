@@ -17,7 +17,7 @@
     right: 0;
     width: @icon-size-sm;
     height: @icon-size-sm;
-    border: 1.5 * @hd solid @color-text-caption;
+    border: 1 * @hd solid @color-c4;
     border-radius: @radius-circle;
     transform: rotate(0deg);
     box-sizing: border-box;
@@ -25,11 +25,11 @@
     &:after {
       position: absolute;
       display: none;
-      top: 3 * @hd;
-      right: 3 * @hd;
+      top: 4.25 * @hd;
+      right: 4.25 * @hd;
       z-index: 999;
-      width: 10 * @hd;
-      height: 10 * @hd;
+      width: 11 * @hd;
+      height: 11 * @hd;
       // border-style: solid;
       // border-width: 0 1.5 * @hd 1.5 * @hd 0;
       content: '\0020';
@@ -142,23 +142,21 @@
 
 
 .@{checkboxWarpPrefixCls}-multi {
-  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: @icon-size-sm;
   height: @icon-size-sm;
 
-  .@{checkboxWarpPrefixCls}-inner {
+  span.@{checkboxWarpPrefixCls}-inner {
     position: absolute;
     right: 0;
     width: @icon-size-sm;
     height: @icon-size-sm;
-    border: 1.5 * @hd solid @color-text-caption;
+    border: 1 * @hd solid @color-c4;
     border-radius: @radius-xs;
     transform: rotate(0deg);
     box-sizing: border-box;
     border-radius: @radius-xs;
-    background-color: #fff;
 
     &:after {
       position: absolute;
@@ -173,7 +171,8 @@
       content: '\0020';
       transform: rotate(45deg);
       border-radius: 0;
-      background-color: #fff;
+      background-color: @color-c3;
+      border-color: #fff;
     }
   }
 
@@ -189,13 +188,14 @@
     appearance: none;
   }
 
-  &.@{checkboxWarpPrefixCls}-checked {
+  .@{checkboxWarpPrefixCls}-checked {
     .@{checkboxInnerPrefixCls} {
       border-color: @brand-primary;
+      background-color: @color-c3;
 
       &:after {
         display: block;
-        border-color: @brand-primary;
+        border-color: #fff;
       }
     }
   }
