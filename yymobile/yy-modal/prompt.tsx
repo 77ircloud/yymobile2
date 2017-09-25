@@ -25,6 +25,16 @@ export default function prompt(
     data[inputType] =  target.value;
   }
 
+  function onBlur(e) {
+    const target = e.target;
+    target.className = '';
+  }
+
+  function onFocus(e) {
+    const target = e.target;
+    target.className = `${prefixCls}-input--focus`;
+  }
+
   let inputDom;
 
   const focusFn = function(input) {
@@ -46,6 +56,7 @@ export default function prompt(
               defaultValue={defaultValue}
               ref={input => focusFn(input)}
               onChange={onChange}
+              onBlur={onBlur}
               placeholder={placeholders[0]}
             />
           </div>
@@ -55,6 +66,8 @@ export default function prompt(
               value={data.password}
               defaultValue=""
               onChange={onChange}
+              onFocus={onFocus}
+              onBlur={onBlur}
               placeholder={placeholders[1]}
             />
           </div>
@@ -71,6 +84,8 @@ export default function prompt(
               defaultValue=""
               ref={input => focusFn(input)}
               onChange={onChange}
+              onFocus={onFocus}
+              onBlur={onBlur}
               placeholder={placeholders[0]}
             />
           </div>
@@ -89,6 +104,8 @@ export default function prompt(
               defaultValue={defaultValue}
               ref={input => focusFn(input)}
               onChange={onChange}
+              onFocus={onFocus}
+              onBlur={onBlur}
               placeholder={placeholders[0]}
             />
           </div>

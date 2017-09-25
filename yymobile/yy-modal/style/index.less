@@ -30,7 +30,7 @@
       .button-common();
 
       &:first-child {
-        color: @color-text-base;
+        color: @color-c2;
       }
       &:last-child {
         position: relative;
@@ -54,11 +54,13 @@
 
   &-input-container {
     margin-top: @v-spacing-md;
-    .hairline('all', @border-color-base, @radius-sm);
   }
   &-input {
     height: 36 * @hd;
     line-height: @line-height-base;
+    .@{yyModalPrefixClass}-input--focus {
+        border-bottom: @border-width-sm solid @brand-primary;
+      }
 
     &:nth-child(2) {
       position: relative;
@@ -66,7 +68,10 @@
     }
     input {
       position: relative;
-      border: 0;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: @border-width-sm solid @color-c4;
       width: 98%;
       height: 34 * @hd;
       top: 1PX;
