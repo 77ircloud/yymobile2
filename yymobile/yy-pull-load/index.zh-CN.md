@@ -5,67 +5,50 @@ title: YyPullLoad
 subtitle: 下拉刷新
 ---
 
-用作显示系统的重要信息，并请求用户进行操作反馈，eg：删除某个重要内容时，弹出 Modal 进行二次确认。
+### 简介
+1. 只依赖 react/react-dom
+2. 样式使用 less 编写
+3. 支持 body 或者组件根 DOM 固定高度作为外部容器 contianer（即可视区域大小）
+4. 触摸事件绑定在内容块 content（即高度为 auto 的DOM ）
+5. 纯 React 组件方式开发的
+6. 支持自定义刷新和加载更多 UI 组件
+7. 支持代码动态调起刷新和加载更多（组件将展示刷新和加载更多样式）
+8. **只支持移动触摸设备**
 
-### 规则
-- 尽可能少用。Modal 会打断用户操作，只用在重要的时候。
-- 标题应该简明，不能超过 1 行；描述内容应该简明、完整，一般不多于 2 行。
-- 操作按钮最多到 3 个（竖排），一般为 1-2 个（横排）；3 个以上建议使用组件 ActionSheet 来完成。
-- 一般将用户最可能点击的按钮，放在右侧。另外，取消按钮应当始终放在左侧。
+### 功能点
+1. 下拉距离大于阈值触发刷新动作
+2. 滚动到距底部距离小于阈值加载更多
+3. 支持自定义刷新和加载更多 UI 组件
 
+### 参数说明：
+| 参数 | 说明 | 类型 | 默认值 | 备注 |
+| --- | --- | --- | --- | --- |
+| action | 用于同步状态 | string | | isRequired |
+| handleAction | 用于处理状态 | func | | isRequired |
+| hasMore | 是否还有更多内容可加载 | bool |false | |
+| downEnough | 下拉距离是否满足要求 | num | 100 | |
+| distanceBottom | 距离底部距离触发加载更多 | num | 100 |  |
+| isBlockContainer | 是否开启使用组件根 DOM 作为外部容器 contianer | bool | false |  |
+| HeadNode | 自定义顶部刷新 UI 组件 | any | [ReactPullLoad HeadNode](./src/HeadNode.jsx) | 必须是一个 React 组件 |
+| FooterNode | 自定义底部加载更多 UI 组件 | any | [ReactPullLoad FooterNode](./src/FooterNode.jsx) | 必须是一个 React 组件 |
 
-## API
-
-适用平台：WEB、React-Native
-
-### Modal
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| visible     | 对话框是否可见 | Boolean          | false           |
-| closable    | 是否显示关闭按钮 | Boolean    | `false`        |
-| maskClosable | 点击蒙层是否允许关闭 (only transparent) | Boolean   | true       |
-| onClose     | 点击 x 或 mask 回调       | (): void   | 无 |
-| transparent | 是否背景透明       | Boolean   |  false |
-| popup | 是否弹窗模式, popup 模式下 transparent 自动失效       | Boolean   |  false |
-| animationType | 可选: 'slide-down/up'(transparent 模式下 / `web version`) / 'fade' / 'slide'(仅非 tranparent) | String |   fade |
-| title       | 标题 (only transparent)   | React.Element    | 无           |
-| footer     | 底部内容 (only not transparent)     |  Array [{text, onPress}]    | [] |
-| prefixCls (`web only`)    | 样式类名前缀 |    String   | `am-modal`      |
-| style (`web only`) |  样式    | Object | {} |
-| platform (`web only`) |  设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios`    | String | `'ios'`|
-
-### Modal.alert(title, message, actions?, platform?)
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| title        | 标题                      | String 或 React.Element   | 无            |
-| message      | 提示信息                  | String 或 React.Element    | 无    |
-| actions         | 按钮组, [{text, onPress, style}]       | Array | 无            |
-| platform (`web only`) |  设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios`    | String | `'ios'`|
-
-`Modal.alert(title, message, actions?, platform?).close()` 可以在外部关闭 Alert
-
-### Modal.prompt(title, message, callbackOrActions, type?, defaultValue?, placeholders?, platform?)
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| title        | 标题                      | String 或 React.Element   | 无            |
-| message      | 提示信息                  | String 或 React.Element                    | 无    |
-| callbackOrActions  | 按钮组 [{text, onPress}] 或回调函数      | Array or Function | 无            |
-| type       | prompt 的样式   | String (`default`, `secure-text`, `login-password`)|  `default`  |
-| defaultValue       | 默认值(input 为 password 类型不支持)   | String |   -  |
-| placeholders       | ['', '']  | String[] |   -  |
-| platform (`web only`) |  设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios`    | String | `'ios'`|
+另外 ReactPullLoad 组件支持根属性扩展 例如： className\style 等等
 
 
-`Modal.prompt(title, message, callbackOrActions, type?, defaultValue?, placeholders?, platform?).close()` 可以在外部关闭 prompt`
+### STATS list
 
-### Modal.operation(actions?, platform?)
+| 属性 | 值 | 根节点 className | 说明 |
+| --- | --- | --- | --- |
+| init | '' | | 组件初始状态 |
+| pulling | 'pulling' | state-pulling | 下拉状态 |
+| enough | 'pulling enough' | state-pulling.enough| 下拉并且已经满足阈值 |
+| refreshing | 'refreshing' | state-refreshing| 刷新中（加载数据中） |
+| refreshed | 'refreshed' | state-refreshed| 完成刷新动作 |
+| reset | 'reset' | state-reset| 恢复默认状态 |
+| loading | 'loading' | state-loading | 加载中 |
 
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| actions         | 按钮组, [{text, onPress, style}]       | Array | 无            |
-| platform (`web only`) |  设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios`    | String | `'ios'`|
+init/reset -> pulling -> enough -> refreshing -> refreshed -> reset
 
-`Modal.operation(actions?, platform?).close()` 可以在外部关闭 operation`
+init/reset -> pulling -> reset
+
+init/reset -> loading -> reset

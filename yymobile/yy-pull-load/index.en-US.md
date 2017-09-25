@@ -4,62 +4,47 @@ type: YYMobile
 title: YyPullLoad
 ---
 
-Use to show important information for the system, and ask for user feedback. eg: When deleting an important content, pop up a Modal for secondary confirmation.
+### version 1.0.4
 
-### Rules
-- Use as few as possible. Modal will interrupt user operation, only use it at important situation.
-- Title should be concise, do not exceed 1 line; description should be concise and complete, generally no more than 2 lines.
-- Operation buttons are up to 3(vertical), generally 1-2(horizontal); [ActionSheet](/components/action-sheet) is preferred when there are more than 3 actions.
-- Generally put the most likely clicked button on the right side. In addition, the cancel button should always be on the left.
+### Description
+1. Only depend on react/react-dom, without any other package.
+2. Use less.
+3. Support body or root Dom as container.
+4. Bind touch event on component root Dom.
+5. It.s develop as Pure react component.
+6. Support config UI component (HeadNode and FooterNode).
+7. Can apply refreshing or loading through modify STATE.
+8. **Only support mobile device**
 
-## API
+## API：
+| Property | Description | Type | default | Remarks |
+| --- | --- | --- | --- | --- |
+| action | sync component status | string | | isRequired |
+| handleAction | handle status | func | | isRequired |
+| hasMore | flag for are there any more content to load | bool |false | |
+| downEnough | how long distance is enough to refreshing | num | 100 | use px as unit |
+| distanceBottom | current position is apart from bottom | num | 100 | use px as unit |
+| isBlockContainer | set root dom as container | bool | false |  |
+| HeadNode | custom header UI compoent | any | [ReactPullLoad HeadNode](./src/HeadNode.jsx) | must be a react component |
+| FooterNode | custom footer UI compoent | any | [ReactPullLoad FooterNode](./src/FooterNode.jsx) | must be a react component |
 
-Support WEB, React-Native.
+Remarks: ReactPullLoad support set root dom className and style.
 
-### Modal
 
-Properties | Descrition | Type | Default
------------|------------|------|--------
-| visible      | Determine whether a modal dialog is visible or not | Boolean          | false           |
-| closable    | Determine whether a close (x) button is visible or not | Boolean    | `false`       |
-| maskClosable | Determine whether to close the modal dialog when clicked mask of it (only transparent) | Boolean   | true       |
-| onClose      | Callback for clicking close icon x or mask        | (): void   | - |
-| transparent | transparent mode or full screen mode       | Boolean   |  false |
-| popup | popup mode, transparent will not work when in popup mode | Boolean   |  false |
-| animationType | Options: 'slide-down/up'(only transparent / `web version`) / 'fade' / 'slide'(only not tranparent) | String |   fade |
-| title       | title (only transparent)         | React.Element    | -           |
-| footer     | footer content (only not transparent)       |  Array [{text, onPress}]    | [] |
-| prefixCls (`web only`)      | Class name prefix of elements |    String   | `am-modal`      |
-| style (`web only`) |  style    | Object | {} |
-| platform (`web only`) |  set the special style depends on platform, Options  `android`, `ios` | String | `'ios'`|
+### STATS list
 
-### Modal.alert(title, message, actions?) ( Support Platform：WEB、React-Native )
+| Property | Value | root className | explain |
+| --- | --- | --- | --- |
+| init | '' | | component initial status |
+| pulling | 'pulling' | state-pulling | pull status |
+| enough | 'pulling enough' | state-pulling.enough| pull down enough status |
+| refreshing | 'refreshing' | state-refreshing| refreshing status fetch data |
+| refreshed | 'refreshed' | state-refreshed| refreshed |
+| reset | 'reset' | state-reset| reset status |
+| loading | 'loading' | state-loading | fetching data |
 
-Properties | Descrition | Type | Default
------------|------------|------|--------
-| title        | title                      | String or React.Element   | -            |
-| message      | message                  | String or React.Element    | -    |
-| actions         | button group, [{text, onPress, style}]       | Array | -            |
+init/reset -> pulling -> enough -> refreshing -> refreshed -> reset
 
-call `Modal.alert(title, message, actions?).close()`  can close Alert Modal outside anywhere as you wish.
+init/reset -> pulling -> reset
 
-### Modal.prompt(title, message, callbackOrActions, type?, defaultValue?) ( Support Platform：WEB )
-
-Properties | Descrition | Type | Default
------------|------------|------|--------
-| title        | title                      | String or React.Element   | -            |
-| message      | message                  | String or React.Element                    | -    |
-| callbackOrActions  | button group [{text, onPress}] or callback      | Array or Function | -            |
-| type       | prompt style   | String (`default`, `secure-text`, `login-password`)|  `default`  |
-| defaultValue       | Default(input whick type is password is not supported)   | String |   -  |
-| placeholders       | ['', '']  | String[] |   -  |
-
-call Modal.prompt(title, message, callbackOrActions, type?, defaultValue?, placeholders?).close()` can close prompt Modal outside anywhere as you wish.
-
-### Modal.operation(actions?) ( Support Platform：WEB、React-Native )
-
-Properties | Descrition | Type | Default
------------|------------|------|--------
-| actions         | button group, [{text, onPress, style}]       | Array | -            |
-
-call Modal.operation(actions?).close()` can close Operation Modal outside anywhere as you wish.
+init/reset -> loading -> reset

@@ -2,9 +2,9 @@
 // import { STATS as _STATS } from 'constants'
 // export const STATS = _STATS
 // export default ReactPullLoad
-import ReactPullLoad from "./ReactPullLoad";
+import YyPullLoad from "./PullLoad";
 import { STATS } from "./constants";
 
-ReactPullLoad.STATS = STATS;
+YyPullLoad.STATS = STATS;
 
-export default ReactPullLoad
+export default YyPullLoad

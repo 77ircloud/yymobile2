@@ -10,9 +10,9 @@ title:
 ````jsx
 import React, { Component, PureComponent, PropTypes } from 'react'
 import { render } from 'react-dom'
-import { ReactPullLoad } from 'yymobile'
+import { YyPullLoad } from 'yymobile'
 
-const STATS = ReactPullLoad.STATS
+const STATS = YyPullLoad.STATS
 
 
 const defaultStyle ={
@@ -132,7 +132,7 @@ export class App extends Component{
         <div style={fixHeaderStyle}>
           fixed header
         </div>
-        <ReactPullLoad
+        <YyPullLoad
           downEnough={150}
           ref="reactpullload"
           className="block"
@@ -155,7 +155,7 @@ export class App extends Component{
               })
             }
           </ul>
-        </ReactPullLoad>
+        </YyPullLoad>
       </div>
     )
   }

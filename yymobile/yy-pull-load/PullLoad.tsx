@@ -21,7 +21,7 @@ function removeEvent(obj, type, fn) {
     obj.removeEventListener(type, fn, false);
 }
 
-export default class ReactPullLoad extends Component {
+export default class YyPullLoad extends Component {
   static propTypes = {
     action: PropTypes.string.isRequired,     //用于同步状态
     handleAction: PropTypes.func.isRequired, //用于处理状态
