@@ -3,13 +3,14 @@ import React from 'react';
 import classnames from 'classnames';
 import Icon from '../icon';
 import NavBarProps from './PropsType';
-import SearchBar from '../search-bar/index';
+import SearchBar from '../yy-search-bar/index';
 
 export default class YyBar extends React.Component<NavBarProps, any> {
   static defaultProps = {
     prefixCls: 'yy-yybar',
     mode: 'dark',
     iconName: 'left',
+    placeholder: '请输入搜索内容',
     onLeftClick() {
     },
   };
@@ -17,6 +18,7 @@ export default class YyBar extends React.Component<NavBarProps, any> {
   render() {
     const {
       prefixCls, className, children, mode, iconName, leftContent, rightContent, onLeftClick,
+      placeholder,
       ...restProps,
     } = this.props;
 
@@ -35,7 +37,7 @@ export default class YyBar extends React.Component<NavBarProps, any> {
           <span className={`${prefixCls}-left-content`}>{leftContent}</span>
         </div>
         <div className={`${prefixCls}-right`}>
-          <SearchBar showCancelButton={true} cancelText={'搜索'} placeholder={'搜索'} />
+          <SearchBar showCancelButton={true} cancelText={'搜索'} placeholder={placeholder} />
         </div>
       </div>
     );
