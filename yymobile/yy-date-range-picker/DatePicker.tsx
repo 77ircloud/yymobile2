@@ -1,6 +1,4 @@
 import React from 'react';
-import 'rmc-picker/assets/index.css';
-import 'rmc-date-picker/assets/index.css';
 import MultiPicker from 'rmc-picker/lib/MultiPicker';
 import Picker from 'rmc-picker/lib/Picker';
 import IDatePickerProps from './IDatePickerProps';
@@ -36,8 +34,8 @@ const ONE_DAY = 24 * 60 * 60 * 1000;
 
 class DatePicker extends React.Component<IDatePickerProps, any> {
   static defaultProps = {
-    prefixCls: 'rmc-date-picker',
-    pickerPrefixCls: 'rmc-picker',
+    prefixCls: 'yy-simple-date-picker',
+    pickerPrefixCls: 'yy-simple-picker',
     locale: defaultLocale,
     mode: DATE,
     disabled: false,
