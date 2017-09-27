@@ -14,9 +14,6 @@ Tag 分为两种类型：`selectable` / `readonly`, 后者是无交互的，尺�
 There are two kinds of Tag, selectable and readonly type, the latter is a smaller tag without interactive behavior, which is typically used for display content.
 
 ````jsx
-import 'rmc-picker/assets/index.css';
-import 'rmc-date-picker/assets/index.css';
-import 'rmc-picker/assets/popup.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { YyDateRangePicker, DatePickere } from 'yymobile';
@@ -83,10 +80,13 @@ class Demo extends React.Component<any, any> {
 
   onOk = (startTime, endTime) => {
     console.log('onOK', startTime, endTime)
+    return true;
   }
 
   render() {
     const props = this.props;
+    const startDate = new Date("2016-6-6");
+    const endDate = new Date("2017-7-7");
     const { date } = this.state;
     return (<div style={{ margin: '10px 30px' }}>
       <h2>popup date picker</h2>
@@ -95,16 +95,16 @@ class Demo extends React.Component<any, any> {
           transitionName="yyc-picker-popup-slide-fade"
           maskTransitionName="yyc-picker-popup-fade"
           title="Date picker"
-          date={date}
           onDismiss={this.onDismiss}
           onOk={this.onOk}
           rootNativeProps={{'data-xx': 'yy'}}
           minDate={minDate}
           maxDate={maxDate}
-          defaultDate={now}
           mode={props.mode}
           locale={props.locale}
           onDateChange={this.onChange}
+          startDate={startDate}
+          endDate={endDate}
         >
           <button onClick={this.show}>{date && format(date) || 'open'}</button>
         </YyDateRangePicker>

@@ -9,6 +9,6 @@ export default class FlexItem extends React.Component<FlexItemProps, any> {
   };
 
   render() {
-    return <_Flex.FlexItem {...this.props} />;
+    return <_Flex.Item {...this.props} />;
   }
 }

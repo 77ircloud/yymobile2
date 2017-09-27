@@ -66,12 +66,12 @@ ReactDOM.render(<App1 />, mountNode);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.my-drawer .am-drawer-sidebar {
+.my-drawer .yy-drawer-sidebar {
   background-color: #fff;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.my-drawer .am-drawer-sidebar .am-list {
+.my-drawer .yy-drawer-sidebar .yy-list {
   width: 300px;
   padding: 0;
 }

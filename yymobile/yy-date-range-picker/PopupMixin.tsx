@@ -22,8 +22,8 @@ export default {
       pickerValue: 'value' in this.props ? this.props.value : null,
       visible: this.props.visible || false,
       onStart: true,
-      startTime: null,
-      endTime: null,
+      startTime: this.props.startDate,
+      endTime: this.props.endDate,
     };
   },
 
@@ -117,8 +117,9 @@ export default {
 
   onOk() {
     const { startTime, endTime } = this.state;
-    this.props.onOk(startTime, endTime);
-    this.fireVisibleChange(false);
+    if (this.props.onOk(startTime, endTime)) {
+      this.fireVisibleChange(false);
+    };
   },
 
   getContent() {
