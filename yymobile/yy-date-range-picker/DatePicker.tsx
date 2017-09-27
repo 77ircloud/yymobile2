@@ -1,4 +1,6 @@
 import React from 'react';
+import 'rmc-picker/assets/index.css';
+import 'rmc-date-picker/assets/index.css';
 import MultiPicker from 'rmc-picker/lib/MultiPicker';
 import Picker from 'rmc-picker/lib/Picker';
 import IDatePickerProps from './IDatePickerProps';
