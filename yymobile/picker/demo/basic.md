@@ -14,6 +14,8 @@ import { createForm } from 'rc-form';
 import arrayTreeFilter from 'array-tree-filter';
 
 import { district, provinceLite as province } from 'antd-mobile-demo-data';
+import data from './area.json'
+
 
 // 如果不是使用 List.Item 作为 children
 const CustomChildren = props => (
@@ -127,10 +129,10 @@ class Test extends React.Component {
       <WhiteSpace size="lg" />
       <List style={{ backgroundColor: 'white' }} className="picker-list">
         <Picker extra="请选择(可选)"
-          data={district}
+          data={data}
           title="Areas"
           {...getFieldProps('district', {
-            initialValue: ['340000', '341500', '341502'],
+            initialValue: [110000, 110100, 110101],
           })}
           onOk={e => console.log('ok', e)}
           onDismiss={e => console.log('dismiss', e)}
