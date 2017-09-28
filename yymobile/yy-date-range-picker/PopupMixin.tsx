@@ -24,6 +24,7 @@ export default {
       onStart: true,
       startTime: this.props.startDate,
       endTime: this.props.endDate,
+      didSetVisibleProp: false
     };
   },
 
@@ -34,7 +35,14 @@ export default {
       });
     }
     if ('visible' in nextProps) {
-      this.setVisibleState(nextProps.visible);
+      if (!this.state.didSetVisibleProp) {
+        this.setVisibleState(nextProps.visible);
+        if (nextProps.visible) {
+          this.setState({
+            didSetVisibleProp: true
+          })
+        }
+      }
     }
   },
 
@@ -79,12 +87,26 @@ export default {
     }
   },
 
-  fireVisibleChange(visible) {
+  fireVisibleChange(visible, isForce) {
+    const { didSetVisibleProp } = this.state;
     if (this.state.visible !== visible) {
-      if (!('visible' in this.props)) {
+      if (didSetVisibleProp || !('visible' in this.props)) {
         this.setVisibleState(visible);
+        if (!visible) {
+          this.setState({
+            didSetVisibleProp: false
+          })
+        }
+        this.props.onVisibleChange(visible);
+      } else {
+        this.setVisibleState(visible);
+        this.props.onVisibleChange(visible);
+        if (!visible) {
+          this.setState({
+            didSetVisibleProp: false
+          })
+        }
       }
-      this.props.onVisibleChange(visible);
     }
   },
 
@@ -112,7 +134,7 @@ export default {
     if (childProps[this.props.triggerType]) {
       childProps[this.props.triggerType](e);
     }
-    this.fireVisibleChange(!this.state.visible);
+    this.fireVisibleChange(!this.state.visible, true);
   },
 
   onOk() {

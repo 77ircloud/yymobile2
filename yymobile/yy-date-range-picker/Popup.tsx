@@ -48,7 +48,7 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
       <Modal
         prefixCls={`${prefixCls}`}
         className={props.className || ''}
-        visible={true}
+        visible
         closable={false}
         transitionName={props.transitionName || props.popupTransitionName}
         maskTransitionName={props.maskTransitionName}

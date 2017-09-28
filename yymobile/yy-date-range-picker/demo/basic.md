@@ -58,8 +58,10 @@ class Demo extends React.Component<any, any> {
 
   constructor(props) {
     super(props);
+    this.swichVisible = this.swichVisible.bind(this)
     this.state = {
       date: null,
+      visible: false
     };
   }
 
@@ -72,6 +74,13 @@ class Demo extends React.Component<any, any> {
 
   onDismiss = () => {
     console.log('onDismiss');
+  }
+
+  swichVisible() {
+    const { visible } = this.state;
+    this.setState({
+      visible: !visible
+    })
   }
 
   show = () => {
@@ -87,9 +96,10 @@ class Demo extends React.Component<any, any> {
     const props = this.props;
     const startDate = new Date("2016-6-6");
     const endDate = new Date("2017-7-7");
-    const { date } = this.state;
+    const { date, visible } = this.state;
     return (<div style={{ margin: '10px 30px' }}>
       <h2>popup date picker</h2>
+      <button onClick={this.swichVisible}>switch</button>
       <div>
         <YyDateRangePicker
           transitionName="yyc-picker-popup-slide-fade"
@@ -105,6 +115,7 @@ class Demo extends React.Component<any, any> {
           onDateChange={this.onChange}
           startDate={startDate}
           endDate={endDate}
+          visible={visible}
         >
           <button onClick={this.show}>{date && format(date) || 'open'}</button>
         </YyDateRangePicker>
