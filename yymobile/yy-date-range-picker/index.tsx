@@ -47,7 +47,7 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
         minDate={minDate}
         maxDate={maxDate}
         defaultDate={startDate || now}
-        mode={mode}
+        mode={"date"}
         locale={locale}
         onDateChange={onDateChange}
       />

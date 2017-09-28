@@ -52,7 +52,6 @@ const zhCn = {
 
 class Demo extends React.Component<any, any> {
   static defaultProps = {
-    mode: 'date',
     locale: zhCn,
   };
 
@@ -110,7 +109,6 @@ class Demo extends React.Component<any, any> {
           rootNativeProps={{'data-xx': 'yy'}}
           minDate={minDate}
           maxDate={maxDate}
-          mode={props.mode}
           locale={props.locale}
           onDateChange={this.onChange}
           startDate={startDate}
