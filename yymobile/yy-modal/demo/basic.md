@@ -43,6 +43,7 @@ class App extends React.Component {
         <YyModal
           visible={this.state.modal1}
           transparent
+          popupDiyClassName="aaaaa"
           maskClosable={false}
           onClose={this.onClose('modal1')}
           title="Title"
@@ -59,6 +60,7 @@ class App extends React.Component {
           visible={this.state.modal2}
           maskClosable={false}
           animationType="slide-up"
+          className="popup-classname"
         >
           <List renderHeader={() => <div>委托买入</div>} className="popup-list">
             {['股票名称', '股票代码', '买入价格'].map((i, index) => (

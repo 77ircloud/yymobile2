@@ -72,7 +72,7 @@ export default class Modal extends ModalComponent<ModalProps, any> {
   render() {
     let {
       prefixCls, className, wrapClassName, transitionName, maskTransitionName, style, platform,
-      footer = [], operation, animated, transparent, popup, animationType, ...restProps,
+      footer = [], operation, animated, transparent, popup, animationType, popupDiyClassName, ...restProps,
     } = this.props;
 
     const btnGroupClass = classnames(
@@ -110,6 +110,7 @@ export default class Modal extends ModalComponent<ModalProps, any> {
       [`${prefixCls}-popup`]: popup,
       [`${prefixCls}-popup-${animationType}`]: popup && animationType,
       [`${prefixCls}-android`]: platform === 'android',
+      [`${prefixCls}-popup-${popupDiyClassName}`]: popupDiyClassName
     });
 
     return (
