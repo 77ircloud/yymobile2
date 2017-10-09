@@ -30,7 +30,8 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
   onOk = (startTime, endTime) => {
     const { onOk } = this.props;
     if (onOk) {
-      if (onOk(startTime, endTime) || onOk(startTime, endTime) === undefined) {
+      const okRes = onOk(startTime, endTime);
+      if (okRes || okRes === undefined) {
         return true;
       } else {
         return false;
