@@ -41,7 +41,6 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
 
   render() {
     const { minDate, maxDate, mode, locale, onDateChange, defaultDate, startDate, endDate} = this.props;
-    console.log('PopupPicker')
     const datePicker = (
       <DatePickere
         rootNativeProps={{'data-xx': 'yy'}}

@@ -29,11 +29,10 @@ export default {
   },
 
   componentWillReceiveProps(nextProps) {
-    if ('value' in nextProps) {
-      this.setState({
-        pickerValue: nextProps.value,
-      });
-    }
+    const { onStart } = this.state
+    this.setState({
+      pickerValue: onStart ? nextProps.startDate : nextProps.endDate,
+    });
     if ('visible' in nextProps) {
       if (!this.state.didSetVisibleProp) {
         this.setVisibleState(nextProps.visible);
@@ -66,7 +65,6 @@ export default {
         });
       }
       const { picker, pickerValueChangeProp } = this.props;
-      console.log('pickerValueChangeProp', pickerValueChangeProp)
       if (picker && picker.props[pickerValueChangeProp]) {
         picker.props[pickerValueChangeProp](startTimeVal, endTimeVal);
       }
@@ -146,10 +144,12 @@ export default {
   },
 
   getContent() {
+    const { onStart, startTime, endTime } = this.state
+    const { startDate, endDate } = this.props
     if (this.props.picker) {
       let { pickerValue } = this.state;
       if (pickerValue === null) {
-        pickerValue = this.props.value;
+        pickerValue = onStart ? startTime : endTime;
       }
       return React.cloneElement(this.props.picker, ({
         [this.props.pickerValueProp]: pickerValue,
