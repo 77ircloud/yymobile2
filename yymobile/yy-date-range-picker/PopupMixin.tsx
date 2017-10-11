@@ -24,23 +24,18 @@ export default {
       onStart: true,
       startTime: this.props.startDate,
       endTime: this.props.endDate,
-      didSetVisibleProp: false
     };
   },
 
   componentWillReceiveProps(nextProps) {
-    const { onStart } = this.state
+    const { onStart } = this.state;
+    const { visible } = this.props;
     this.setState({
       pickerValue: onStart ? nextProps.startDate : nextProps.endDate,
     });
     if ('visible' in nextProps) {
-      if (!this.state.didSetVisibleProp) {
+      if (nextProps.visible !== visible) {
         this.setVisibleState(nextProps.visible);
-        if (nextProps.visible) {
-          this.setState({
-            didSetVisibleProp: true
-          })
-        }
       }
     }
   },
@@ -88,25 +83,9 @@ export default {
   },
 
   fireVisibleChange(visible, isForce) {
-    const { didSetVisibleProp } = this.state;
     if (this.state.visible !== visible) {
-      if (didSetVisibleProp || !('visible' in this.props)) {
-        this.setVisibleState(visible);
-        if (!visible) {
-          this.setState({
-            didSetVisibleProp: false
-          })
-        }
-        this.props.onVisibleChange(visible);
-      } else {
-        this.setVisibleState(visible);
-        this.props.onVisibleChange(visible);
-        if (!visible) {
-          this.setState({
-            didSetVisibleProp: false
-          })
-        }
-      }
+      this.setVisibleState(visible);
+      this.props.onVisibleChange(visible);
     }
   },
 
