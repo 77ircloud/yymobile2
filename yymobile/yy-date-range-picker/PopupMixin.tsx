@@ -60,6 +60,7 @@ export default {
         endTimeVal = new Date(pickerValue.getFullYear() + '-' +
         (pickerValue.getMonth() + 1) + '-' + pickerValue.getDate() + ' 23:59:59');
         this.setState({
+          pickerValue: endTimeVal,
           endTimeVal,
           endTime: endTimeVal,
         });
