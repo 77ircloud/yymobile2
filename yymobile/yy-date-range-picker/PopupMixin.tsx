@@ -147,6 +147,7 @@ export default {
   },
 
   hide() {
+    this.props.onDismiss();
     this.fireVisibleChange(false);
   },
   switchStart() {
