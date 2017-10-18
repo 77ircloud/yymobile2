@@ -11,7 +11,7 @@ const PopupPicker = createClass<IPopupPickerProps, any>({
 
   getDefaultProps() {
     return {
-      prefixCls: 'yy-picker-popup',
+      prefixCls: 'yy-picker-popup-range',
       triggerType: 'onClick',
       WrapComponent: 'span',
     };
