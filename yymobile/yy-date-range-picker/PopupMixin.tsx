@@ -131,6 +131,23 @@ export default {
       if (pickerValue === null) {
         pickerValue = onStart ? startTime : endTime;
       }
+      console.log('如果选中结束时间，则需要限制结束时间大于开始时间')
+      // 如果选中结束时间，则需要限制结束时间大于开始时间
+      if (!onStart) {
+        return React.cloneElement(this.props.picker, ({
+          [this.props.pickerValueProp]: pickerValue,
+          [this.props.pickerValueChangeProp]: this.onPickerChange,
+          minDate: startTime,
+          ref: this.saveRef,
+        }));
+      } else {
+        return React.cloneElement(this.props.picker, ({
+          [this.props.pickerValueProp]: pickerValue,
+          [this.props.pickerValueChangeProp]: this.onPickerChange,
+          maxDate: endTime,
+          ref: this.saveRef,
+        }));
+      }
       return React.cloneElement(this.props.picker, ({
         [this.props.pickerValueProp]: pickerValue,
         [this.props.pickerValueChangeProp]: this.onPickerChange,
