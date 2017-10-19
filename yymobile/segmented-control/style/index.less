@@ -29,6 +29,14 @@
     box-sizing: border-box;
     border-left-width: 0;
 
+    &-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
     &-tintcolor {
       border-color: @segmented-control-color;
     }
@@ -49,11 +57,7 @@
 
     &-active {
       .@{segment-prefix-cls}-item-inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
+
         opacity: 0.1;
         transition: background .2s;
         background-color: @segmented-control-color;
