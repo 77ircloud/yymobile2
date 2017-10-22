@@ -32,6 +32,8 @@ export default {
     const { visible } = this.props;
     this.setState({
       pickerValue: onStart ? nextProps.startDate : nextProps.endDate,
+      startTime: nextProps.startDate,
+      endTime: nextProps.endDate,
     });
     if ('visible' in nextProps) {
       if (nextProps.visible !== visible) {
