@@ -54,8 +54,14 @@ export default {
           startTime: pickerValue,
         });
       } else {
-        endTimeVal = new Date(pickerValue.getFullYear() + '-' +
-        (pickerValue.getMonth() + 1) + '-' + pickerValue.getDate() + ' 23:59:59');
+        endTimeVal = new Date(
+          pickerValue.getFullYear(),
+          (pickerValue.getMonth() + 1),
+          pickerValue.getDate(),
+          23,
+          59,
+          59
+        );
         this.setState({
           pickerValue: endTimeVal,
           endTimeVal,
@@ -133,7 +139,7 @@ export default {
       if (pickerValue === null) {
         pickerValue = onStart ? startTime : endTime;
       }
-      console.log('如果选中结束时间，则需要限制结束时间大于开始时间')
+      // console.log('如果选中结束时间，则需要限制结束时间大于开始时间')
       // 如果选中结束时间，则需要限制结束时间大于开始时间
       if (!onStart) {
         return React.cloneElement(this.props.picker, ({
