@@ -56,7 +56,7 @@ export default {
       } else {
         endTimeVal = new Date(
           pickerValue.getFullYear(),
-          (pickerValue.getMonth() + 1),
+          pickerValue.getMonth(),
           pickerValue.getDate(),
           23,
           59,
