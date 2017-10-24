@@ -24,18 +24,18 @@ export default class Modal extends ModalComponent<ModalProps, any> {
       return;
     }
     // fix touch to scroll background page on iOS
-    const prefixCls = this.props.prefixCls;
-    const pNode = (node => {
-      while ( node.parentNode && node.parentNode !== document.body ) {
-        if ( node.classList.contains(prefixCls)) {
-          return node;
-        }
-        node = node.parentNode;
-      }
-    })(e.target);
-    if (!pNode) {
-      e.preventDefault();
-    }
+    // const prefixCls = this.props.prefixCls;
+    // const pNode = (node => {
+    //   while ( node.parentNode && node.parentNode !== document.body ) {
+    //     if ( node.classList.contains(prefixCls)) {
+    //       return node;
+    //     }
+    //     node = node.parentNode;
+    //   }
+    // })(e.target);
+    // if (!pNode) {
+    //   e.preventDefault();
+    // }
     return true;
   }
 
