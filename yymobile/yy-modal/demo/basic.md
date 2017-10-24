@@ -44,6 +44,7 @@ class App extends React.Component {
           visible={this.state.modal1}
           transparent
           popupDiyClassName="aaaaa"
+          dialogWrapCls="bbbbb"
           maskClosable={false}
           onClose={this.onClose('modal1')}
           title="Title"

@@ -26,6 +26,7 @@ export interface ModalProps {
   wrapProps?: {};
   operation?: boolean;
   platform?: string;
+  dialogWrapCls?: string;
 }
 
 export type Action = {

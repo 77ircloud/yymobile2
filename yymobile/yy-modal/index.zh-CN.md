@@ -32,6 +32,7 @@ subtitle: 对话框
 | title       | 标题 (only transparent)   | React.Element    | 无           |
 | footer     | 底部内容 (only not transparent)     |  Array [{text, onPress}]    | [] |
 | prefixCls (`web only`)    | 样式类名前缀 |    String   | `am-modal`      |
+| dialogWrapCls (`web only`)    | modal-wrap层添加自定义类 |    String   | ``      |
 | style (`web only`) |  样式    | Object | {} |
 | platform (`web only`) |  设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios`    | String | `'ios'`|
 

@@ -17,6 +17,7 @@ export default class Modal extends ModalComponent<ModalProps, any> {
     closable: false,
     operation: false,
     platform: 'ios',
+    dialogWrapCls: ''
   };
 
   isInModal(e) {
@@ -72,7 +73,7 @@ export default class Modal extends ModalComponent<ModalProps, any> {
   render() {
     let {
       prefixCls, className, wrapClassName, transitionName, maskTransitionName, style, platform,
-      footer = [], operation, animated, transparent, popup, animationType, popupDiyClassName, ...restProps,
+      footer = [], operation, animated, transparent, popup, animationType, popupDiyClassName, dialogWrapCls, ...restProps,
     } = this.props;
 
     const btnGroupClass = classnames(
@@ -104,6 +105,7 @@ export default class Modal extends ModalComponent<ModalProps, any> {
 
     const wrapCls = classnames(wrapClassName, {
       [`${prefixCls}-wrap-popup`]: popup,
+      [`${prefixCls}-${dialogWrapCls}`]: true,
     });
     const cls = classnames(className, {
       [`${prefixCls}-transparent`]: transparent,
