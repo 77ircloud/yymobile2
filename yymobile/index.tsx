@@ -75,3 +75,4 @@ export { default as YyButton } from './yy-button/index';
 export { default as YyPullLoad } from './yy-pull-load/index';
 export { default as YySearchBar } from './yy-search-bar/index';
 export { default as YyUpload } from './yy-upload/index';
+export { default as YyCarousel } from './yy-carousel/index';
