@@ -2,6 +2,7 @@ interface Props {
   children?: any;
   selectedIndex?: number;
   dots?: boolean;
+  indicator?:boolean;
   vertical?: boolean;
   autoplay?: boolean;
   autoplayInterval?: number;

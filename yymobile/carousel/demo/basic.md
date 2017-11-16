@@ -34,6 +34,7 @@ class App extends React.Component {
         <Carousel
           className="my-carousel"
           autoplay={false}
+          indicator={true}
           infinite
           selectedIndex={1}
           swipeSpeed={35}

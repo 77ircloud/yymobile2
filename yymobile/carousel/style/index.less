@@ -1,6 +1,25 @@
 @import '../../style/mixins';
 @import '../../style/themes/default';
 
+.yy-carousel-container {
+  position: relative;
+
+  .yy-carousel-indicator {
+    position: absolute;
+    width: 50 * @hd;
+    min-height: 50 * @hd;
+    line-height: 50 * @hd;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50 * @hd;
+    color: #fff;
+    text-align: center;
+    right: 10 * @hd;
+    bottom: 10 * @hd;
+    font-size: 16 * @hd;
+    font-weight: 100;
+  }
+}
+
 .yy-carousel {
   position: relative;
 
