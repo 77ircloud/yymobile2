@@ -6,7 +6,7 @@ export default class Carousel extends React.Component<Props, any> {
 
   static defaultProps = {
     prefixCls: 'yy-carousel',
-    indicator: true
+    indicator: false
   };
 
   constructor(props) {
