@@ -2,16 +2,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './Modal';
+import TextareaItem from '../textarea-item';
 
-export default function prompt(
-  title, message, callbackOrActions,
-  type = 'default', defaultValue = '', placeholders = ['', ''],
-  platform = 'ios',
-) {
+export default function prompt(title, message, callbackOrActions,
+                               type = 'default', defaultValue = '', placeholders = ['', ''],
+                               platform = 'ios', maxLength) {
   if (!callbackOrActions) {
     // console.log('Must specify callbackOrActions');
     return {
-      close: () => {},
+      close: () => {
+      },
     };
   }
 
@@ -19,10 +19,16 @@ export default function prompt(
 
   let data: any = {};
 
+  let textareaItemRef;
+
   function onChange(e) {
     const target = e.target;
     const inputType = target.getAttribute('type');
-    data[inputType] =  target.value;
+    data[inputType] = target.value;
+  }
+
+  function onTextareaItemChange(val) {
+    data.textarea = val;
   }
 
   function onBlur(e) {
@@ -37,7 +43,7 @@ export default function prompt(
 
   let inputDom;
 
-  const focusFn = function(input) {
+  const focusFn = function (input) {
     setTimeout(() => {
       if (input) {
         input.focus();
@@ -46,6 +52,25 @@ export default function prompt(
   };
 
   switch (type) {
+    case 'textarea':
+      inputDom = (
+        <div className={`${prefixCls}-input-container`}>
+          <div className={`${prefixCls}-textarea`}>
+            <TextareaItem
+              defaultValue={defaultValue}
+              ref={input => {
+                textareaItemRef = input;
+                focusFn(input);
+              }}
+              onChange={onTextareaItemChange}
+              placeholder={placeholders[0]}
+              autoHeight
+              count={maxLength || 0}
+            />
+          </div>
+        </div>
+      );
+      break;
     case 'login-password':
       inputDom = (
         <div className={`${prefixCls}-input-container`}>
@@ -127,6 +152,9 @@ export default function prompt(
   document.body.appendChild(div);
 
   function close() {
+    // 直接获取 TextareaItem 里的值重置
+    textareaItemRef.textareaRef.value = '';
+
     ReactDOM.unmountComponentAtNode(div);
     if (div && div.parentNode) {
       div.parentNode.removeChild(div);
@@ -140,6 +168,8 @@ export default function prompt(
       return func(text, password);
     } else if (type === 'secure-text') {
       return func(password || defaultValue);
+    } else if (type === 'textarea') {
+      return func(data.textarea || defaultValue || '')
     }
     return func(text);
   }
@@ -147,8 +177,12 @@ export default function prompt(
   let actions;
   if (typeof callbackOrActions === 'function') {
     actions = [
-      { text: '取消' },
-      { text: '确定', onPress: () => { getArgs(callbackOrActions); } },
+      {text: '取消'},
+      {
+        text: '确定', onPress: () => {
+        getArgs(callbackOrActions);
+      }
+      },
     ];
   } else {
     actions = callbackOrActions.map(item => {
@@ -164,7 +198,8 @@ export default function prompt(
   }
 
   const footer = actions.map((button) => {
-    const orginPress = button.onPress || function() {};
+    const orginPress = button.onPress || function () {
+    };
     button.onPress = () => {
       const res = orginPress();
       if (res && res.then) {
@@ -191,7 +226,7 @@ export default function prompt(
       maskTransitionName="am-fade"
       platform={platform}
     >
-      <div style={{ zoom: 1, overflow: 'hidden' }}>{content}</div>
+      <div style={{zoom: 1, overflow: 'hidden'}}>{content}</div>
     </Modal>, div,
   );
 

@@ -59,8 +59,8 @@
     height: 36 * @hd;
     line-height: @line-height-base;
     .@{yyModalPrefixClass}-input--focus {
-        border-bottom: @border-width-sm solid @brand-primary;
-      }
+      border-bottom: @border-width-sm solid @brand-primary;
+    }
 
     &:nth-child(2) {
       position: relative;
@@ -75,13 +75,26 @@
       width: 98%;
       height: 34 * @hd;
       top: 1PX;
-      box-sizing: border-box;  // maybe not need it ?
+      box-sizing: border-box; // maybe not need it ?
 
       margin: 0;
       &::placeholder {
         font-size: @font-size-base;
         color: #ccc;
         padding-left: @h-spacing-md;
+      }
+    }
+  }
+
+  &-textarea {
+    .yy-textarea-item {
+      max-height: 122 * @hd;
+      overflow: auto;
+      border-bottom: @border-width-sm solid @color-c4;
+      display: block;
+
+      &.yy-textarea-focus {
+        border-bottom: @border-width-sm solid @brand-primary;
       }
     }
   }
@@ -171,7 +184,7 @@
       padding-top: 0;
 
       .@{yyModalPrefixClass}-body {
-        padding: 0!important;
+        padding: 0 !important;
       }
 
       .@{yyModalPrefixClass}-button {

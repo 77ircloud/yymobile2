@@ -77,6 +77,19 @@ const App = () => (
     >login-password</Button>
 
     <WhiteSpace size="lg" />
+    <Button onClick={() => prompt(
+      '请输入备注信息',
+      '',
+      (value) => console.log(`value: ${value}`),
+      'textarea',
+      null,
+      ['请输入备注信息'],
+      null
+    )}
+    >textarea</Button>
+
+    <WhiteSpace size="lg" />
+    
   </WingBlank>
 );
 

@@ -4,7 +4,8 @@ import classnames from 'classnames';
 import TextareaItemProps from './PropsType';
 import TouchFeedback from 'rmc-feedback';
 
-function noop() {}
+function noop() {
+}
 
 function fixControlledValue(value) {
   if (typeof value === 'undefined' || value === null) {
@@ -51,8 +52,9 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
   private scrollIntoViewTimeout: any;
 
   focus = () => {
-    this.textareaRef.focus();
-  }
+    this.textareaRef && this.textareaRef.focus();
+  };
+
   componentDidUpdate() {
     if (this.props.autoHeight) {
       const textareaDom = this.textareaRef;
@@ -75,7 +77,7 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
 
   onChange = (e) => {
     let value = e.target.value;
-    const { onChange } = this.props;
+    const {onChange} = this.props;
     if (onChange) {
       onChange(value);
     }
@@ -115,7 +117,8 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
       this.scrollIntoViewTimeout = setTimeout(() => {
         try {
           (document.activeElement as any).scrollIntoViewIfNeeded();
-        } catch (e) { }
+        } catch (e) {
+        }
       }, 100);
     }
   }
@@ -138,7 +141,7 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
       clear, children, error, className, count, labelNumber,
       title, onErrorClick, autoHeight, ...otherProps,
     } = this.props;
-    const { value, defaultValue, disabled } = otherProps;
+    const {value, defaultValue, disabled} = otherProps;
 
     let valueProps;
     if ('value' in this.props) {
@@ -151,7 +154,7 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
       };
     }
 
-    const { focus } = this.state;
+    const {focus} = this.state;
     const wrapCls = classnames(className, `${prefixListCls}-item`, `${prefixCls}-item`, {
       [`${prefixCls}-disabled`]: disabled,
       [`${prefixCls}-item-single-line`]: this.props.rows === 1 && !autoHeight,
@@ -189,13 +192,13 @@ export default class TextareaItem extends React.Component<TextareaItemProps, Tex
           />
         </div>
         {clear && editable && value && characterLength > 0 &&
-          <TouchFeedback activeClassName={`${prefixCls}-clear-active`}>
-            <div className={`${prefixCls}-clear`} onClick={this.clearInput} onTouchStart={this.clearInput} />
-          </TouchFeedback>
+        <TouchFeedback activeClassName={`${prefixCls}-clear-active`}>
+          <div className={`${prefixCls}-clear`} onClick={this.clearInput} onTouchStart={this.clearInput}/>
+        </TouchFeedback>
         }
-        {error && <div className={`${prefixCls}-error-extra`} onClick={this.onErrorClick} />}
+        {error && <div className={`${prefixCls}-error-extra`} onClick={this.onErrorClick}/>}
         {count! > 0 && this.props.rows! > 1 &&
-          <span className={`${prefixCls}-count`}><span>{value ? characterLength : 0}</span>/{count}</span>
+        <span className={`${prefixCls}-count`}><span>{value ? characterLength : 0}</span>/{count}</span>
         }
       </div>
     );
