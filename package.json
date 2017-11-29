@@ -39,7 +39,7 @@
     "rc-collapse": "~1.7.0",
     "rc-drawer": "~0.4.9",
     "rc-input-number": "^4.0.0-alpha.0",
-    "rc-notification": "~2.0.0",
+    "rc-notification": "2.0.5",
     "rc-slider": "~8.2.0",
     "rc-steps": "~2.5.1",
     "rc-swipeout": "~2.0.0",
