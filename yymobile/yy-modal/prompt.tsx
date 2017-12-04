@@ -153,7 +153,9 @@ export default function prompt(title, message, callbackOrActions,
 
   function close() {
     // 直接获取 TextareaItem 里的值重置
-    textareaItemRef.textareaRef.value = '';
+    if (textareaItemRef) {
+      textareaItemRef.textareaRef.value = '';
+    }
 
     ReactDOM.unmountComponentAtNode(div);
     if (div && div.parentNode) {
