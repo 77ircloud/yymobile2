@@ -182,8 +182,8 @@ export default function prompt(title, message, callbackOrActions,
       {text: '取消'},
       {
         text: '确定', onPress: () => {
-        getArgs(callbackOrActions);
-      }
+          return getArgs(callbackOrActions);
+        }
       },
     ];
   } else {
