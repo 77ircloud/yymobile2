@@ -5,7 +5,7 @@ const _indexDemos = ['drawer'];
 const _subListDemos = ['list-view'];
 
 const pluginAntdConfig = {
-  babelConfig: {
+  babelConfig: JSON.stringify({
     plugins: [
       [
         require.resolve('babel-plugin-import'), {
@@ -20,7 +20,7 @@ const pluginAntdConfig = {
         },
       ],
     ],
-  },
+  }),
 };
 
 module.exports = {
