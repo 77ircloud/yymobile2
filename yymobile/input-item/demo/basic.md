@@ -19,17 +19,35 @@ import { List, WhiteSpace } from 'yymobile';
 import { createForm } from 'rc-form';
 
 class BasicInputExample extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        aaValue:11.2
+      };
+    }
   componentDidMount() {
     // this.autoFocusInst.focus();
   }
   handleClick = () => {
     this.customFocusInst.focus();
   }
+  handleChange = (v) => {
+    this.setState({
+      aaValue:v
+    })
+  }
   render() {
     const { getFieldProps } = this.props.form;
     return (
       <div>
         <List renderHeader={() => 'Customize to focus'} prefixCls="yy-list">
+          <InputItem
+            placeholder="auto focus"
+            type="number"
+            value={this.state.aaValue}
+            onChange={this.handleChange}
+            ref={el => this.autoFocusInst = el}
+          >标题</InputItem>
           <InputItem
             {...getFieldProps('autofocus')}
             clear
