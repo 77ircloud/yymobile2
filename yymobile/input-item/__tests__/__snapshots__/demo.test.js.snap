@@ -14,39 +14,47 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          标题
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="auto focus"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            标题
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="auto focus"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          标题
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="click the button below to focus"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            标题
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="click the button below to focus"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
@@ -59,7 +67,7 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
             class="am-list-content"
           >
             <div
-              style="width:100%;color:#108ee9;text-align:center;"
+              style="width:100%;color:#108ee9;text-align:center"
             >
               click to focus
             </div>
@@ -67,7 +75,7 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
         </div>
         <div
           class="am-list-ripple"
-          style="display:none;"
+          style="display:none"
         />
       </div>
     </div>
@@ -84,39 +92,48 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          受控组件
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="Hello World"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            受控组件
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="controled input"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          非受控组件
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            data-seed="logId"
-            placeholder="please input content"
-            type="text"
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            非受控组件
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              data-seed="logId"
+              placeholder="please input content"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -130,28 +147,33 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
     <div
       class="am-list-header"
     >
-      click label to focus input
+      Click label to focus input
     </div>
     <div
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          <div>
-            标题
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            <div>
+              标题
+            </div>
           </div>
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="click label to focus input"
-            type="text"
-          />
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="click label to focus input"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -162,27 +184,31 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
     <div
       class="am-list-header"
     >
-      Show clear icon
+      Show clear
     </div>
     <div
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          标题
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="displayed clear icon while typing"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            标题
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="displayed clear while typing"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -202,21 +228,25 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          标题过长超过默认的5个字
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="limited title length"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            标题过长超过默认的5个字
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="limited title length"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -236,36 +266,44 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-control"
+          class="am-list-line"
         >
-          <input
-            placeholder="no label"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="no label"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
           <div
-            style="background-image:url(https://zos.alipayobjects.com/rmsportal/DfkJHaJGgMghpXdqNaKF.png);background-size:cover;height:22px;width:22px;"
-          />
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="title can be icon，image or text"
-            type="text"
-            value=""
-          />
+            class="am-input-label am-input-label-5"
+          >
+            <div
+              style="background-image:url(https://zos.alipayobjects.com/rmsportal/DfkJHaJGgMghpXdqNaKF.png);background-size:cover;height:22px;width:22px"
+            />
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="title can be icon，image or text"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -285,26 +323,30 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          价格
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="0.00"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="am-input-extra"
-        >
-          ¥
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            价格
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="0.00"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="am-input-extra"
+          >
+            ¥
+          </div>
         </div>
       </div>
     </div>
@@ -324,76 +366,92 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          银行卡
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder=""
-            type="tel"
-            value="8888 8888 8888 8888"
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            银行卡
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder=""
+              type="tel"
+              value="8888 8888 8888 8888"
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          手机号码
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="186 1234 1234"
-            type="tel"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            手机号码
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="186 1234 1234"
+              type="tel"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          密码
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="****"
-            type="password"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            密码
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="****"
+              type="password"
+              value=""
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          数字键盘
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            pattern="[0-9]*"
-            placeholder="click to show number keyboard"
-            type="text"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            数字键盘
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              pattern="[0-9]*"
+              placeholder="click to show number keyboard"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -413,41 +471,49 @@ exports[`renders ./components/input-item/demo/basic.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          姓名
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder=""
-            readonly=""
-            type="text"
-            value="Not editable"
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            姓名
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder=""
+              readonly=""
+              type="text"
+              value="not editable"
+            />
+          </div>
         </div>
       </div>
       <div
-        class="am-list-item am-input-item am-input-disabled"
+        class="am-list-item am-input-item am-list-item-middle am-input-disabled"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          姓名
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            disabled=""
-            placeholder=""
-            type="text"
-            value="style of disabled \`InputItem\`"
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            姓名
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              disabled=""
+              placeholder=""
+              type="text"
+              value="style of disabled \`InputItem\`"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -469,21 +535,25 @@ exports[`renders ./components/input-item/demo/error.md correctly 1`] = `
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
+          class="am-list-line"
         >
-          手机号码
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="input your phone"
-            type="tel"
-            value=""
-          />
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            手机号码
+          </div>
+          <div
+            class="am-input-control"
+          >
+            <input
+              placeholder="input your phone"
+              type="tel"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -497,72 +567,92 @@ exports[`renders ./components/input-item/demo/money.md correctly 1`] = `
     class="am-list"
   >
     <div
-      class="am-list-header"
-    >
-      Format
-    </div>
-    <div
       class="am-list-body"
     >
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-control"
+          class="am-list-line"
         >
           <div
-            class="fake-input-container"
+            class="am-input-label am-input-label-5"
+          >
+            光标在左
+          </div>
+          <div
+            class="am-input-control"
           >
             <div
-              class="fake-input"
+              class="fake-input-container fake-input-container-left"
             >
-              222
+              <div
+                class="fake-input-placeholder"
+              >
+                start from left
+              </div>
+              <div
+                class="fake-input"
+              />
             </div>
           </div>
         </div>
-        <div
-          class="am-input-clear"
-        />
       </div>
       <div
-        class="am-list-item am-input-item"
+        class="am-list-item am-input-item am-list-item-middle"
       >
         <div
-          class="am-input-label am-input-label-5"
-        >
-          普通键盘
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <input
-            placeholder="22"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        class="am-list-item am-input-item"
-      >
-        <div
-          class="am-input-label am-input-label-5"
-        >
-          数字键盘
-        </div>
-        <div
-          class="am-input-control"
+          class="am-list-line"
         >
           <div
-            class="fake-input-container"
+            class="am-input-label am-input-label-5"
+          >
+            光标在右
+          </div>
+          <div
+            class="am-input-control"
           >
             <div
-              class="fake-input-placeholder"
+              class="fake-input-container"
             >
-              money format
+              <div
+                class="fake-input-placeholder"
+              >
+                start from right
+              </div>
+              <div
+                class="fake-input"
+              />
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="am-list-item am-input-item am-list-item-middle"
+      >
+        <div
+          class="am-list-line"
+        >
+          <div
+            class="am-input-label am-input-label-5"
+          >
+            数字键盘
+          </div>
+          <div
+            class="am-input-control"
+          >
             <div
-              class="fake-input"
-            />
+              class="fake-input-container"
+            >
+              <div
+                class="fake-input-placeholder"
+              >
+                money format
+              </div>
+              <div
+                class="fake-input"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -576,7 +666,7 @@ exports[`renders ./components/input-item/demo/money.md correctly 1`] = `
             class="am-list-content"
           >
             <div
-              style="width:100%;color:#108ee9;text-align:center;"
+              style="width:100%;color:#108ee9;text-align:center"
             >
               click to focus
             </div>
@@ -584,44 +674,10 @@ exports[`renders ./components/input-item/demo/money.md correctly 1`] = `
         </div>
         <div
           class="am-list-ripple"
-          style="display:none;"
+          style="display:none"
         />
-      </div>
-      <div
-        class="am-list-item am-input-item"
-      >
-        <div
-          class="am-input-label am-input-label-5"
-        >
-          正整数
-        </div>
-        <div
-          class="am-input-control"
-        >
-          <div
-            class="fake-input-container"
-          >
-            <div
-              class="fake-input-placeholder"
-            >
-              money format natural
-            </div>
-            <div
-              class="fake-input"
-            />
-          </div>
-        </div>
       </div>
     </div>
   </div>
-  <a
-    aria-disabled="false"
-    class="am-button"
-    role="button"
-  >
-    <span>
-      重置为电话类型
-    </span>
-  </a>
 </div>
 `;

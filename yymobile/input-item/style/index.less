@@ -9,8 +9,12 @@
   &.@{inputPrefixCls}-item {
     height: @list-item-height;
     padding-left: @h-spacing-lg;
-    padding-right: @h-spacing-lg;
-    .hairline('bottom');
+  }
+
+  &:not(:last-child) {
+    .@{listPrefixCls}-line {
+      .hairline('bottom');
+    }
   }
 
   .@{inputPrefixCls}-label {
@@ -62,7 +66,6 @@
       background-color: transparent;
       line-height: @line-height-base;
       box-sizing: border-box;
-      text-align: right;
 
       &::placeholder {
         color: @color-text-placeholder;

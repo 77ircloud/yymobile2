@@ -7,8 +7,7 @@ title:
 
 
 ````jsx
-import { InputItem } from 'yymobile';
-import { List, Toast } from 'yymobile';
+import { List, InputItem, Toast } from 'antd-mobile';
 
 class ErrorInputExample extends React.Component {
   state = {

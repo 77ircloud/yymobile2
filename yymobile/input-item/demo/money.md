@@ -2,7 +2,7 @@
 order: 0
 title:
   zh-CN: 金额键盘
-  en-US: MoneyInput
+  en-US: Money input
 ---
 
 ## zh-CN
@@ -14,8 +14,7 @@ title:
 Recommended use of [rc-form ](https://github.com/react-component/form) for controlled component.
 
 ````jsx
-import { InputItem } from 'yymobile';
-import { List, Button } from 'yymobile';
+import { List, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
 
 class H5NumberInputExample extends React.Component {
@@ -27,19 +26,21 @@ class H5NumberInputExample extends React.Component {
     const { type } = this.state;
     return (
       <div>
-        <List renderHeader={() => 'Format'}>
+        <List>
           <InputItem
-            {...getFieldProps('money', {
-              initialValue: '222',
-            })}
+            {...getFieldProps('money3')}
             type={type}
-            placeholder="money keyboard"
+            placeholder="start from left"
             clear
-            maxLength={10}
-            locale={{ confirmLabel: '计算' }}
-            onBlur={value => console.log(value)}
-          />
-          <InputItem placeholder="22">普通键盘</InputItem>
+            moneyKeyboardAlign="left"
+          >光标在左</InputItem>
+          <InputItem
+            type={type}
+            placeholder="start from right"
+            clear
+            onChange={(v) => { console.log('onChange', v); }}
+            onBlur={(v) => { console.log('onBlur', v); }}
+          >光标在右</InputItem>
           <InputItem
             {...getFieldProps('money2', {
               normalize: (v, prev) => {
@@ -65,29 +66,7 @@ class H5NumberInputExample extends React.Component {
               click to focus
             </div>
           </List.Item>
-          <InputItem
-            {...getFieldProps('moneynatural', {
-              normalize: (v) => {
-                if (v && (v.charAt(0) === '0' || v.indexOf('.') >= 0)) {
-                  return v.replace(/^0*(\d*).*$/, '$1');
-                }
-                return v;
-              },
-            })}
-            type={type}
-            placeholder="money format natural"
-            clear
-          >正整数</InputItem>
         </List>
-        <Button
-          onClick={() => {
-            this.setState({
-              type: 'text',
-            });
-          }}
-        >
-          重置为电话类型
-        </Button>
       </div>
     );
   }

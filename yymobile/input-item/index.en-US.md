@@ -26,12 +26,12 @@ Properties | Descrition | Type | Default
 | placeholder  | the string that will be rendered before text input has been entered. | String | ''  |
 | editable    | whether is editable        | bool |  true  |
 | disabled    | whether is disabled       | bool |  false  |
-| clear      |  whether to display clear icon(it takes effect only `editable` is `true` or `disabled` is `false` or `value` has been set) | bool | false  |
+| clear      |  whether to display clear(it takes effect only `editable` is `true` and `disabled` is `false` has been set) | bool | false  |
 | maxLength      |  limits the maximum number of characters that can be entered      | number |    |
 | onChange    | callback that is called when the text input's text changes | (val: string): void |  -  |
 | onBlur     | callback that is called when the text input is blurred | (val: string): void |   -  |
 | onFocus    | callback that is called when the text input is focused | (val: string): void |  -  |
-| error       | whether to display error icon       | bool |  false  |
+| error       | whether to display error       | bool |  false  |
 | onErrorClick   | callback that is called when the error icon is clicked  | (e: Object): void |   |
 | extra       | the right content of `InputItem`   | string or node |  ''  |
 | onExtraClick      | callback that is called when the extra content is clicked | (e: Object): void |  |
@@ -39,12 +39,15 @@ Properties | Descrition | Type | Default
 | updatePlaceholder (`web only`) | whether to replace the placeholder with cleared content | bool | false|
 | prefixListCls (`web only`)    |   the class name prefix of list      | String |  `am-list`  |
 | name (`web only`)   | the name of input       | String |   |
+| moneyKeyboardAlign (`web only`)   | text align direction, only `type='money'` support this api， could be `'left'`, `'right'`       | String |  'right'  |
 | locale   | 国际化，可覆盖全局`[LocaleProvider](https://mobile.ant.design/components/locale-provider)`的配置,  when`type`is`money`，can cunstom the keyboard confirm item's label | Object: { confirmLabel } |  无 |
 
 > More available react-native `InputItem` API can be found at [react-native TextInput](http://facebook.github.io/react-native/docs/textinput.html)
 
-## InputItem methods
+> Note: `InputItem` does not support negative number if `type` is text, you can use `type=text` to do that.
+
+## InputItem Instance methods
 
 Property | Description | Type | Default
 ----|-----|------|------
-| focus (`Web Only`)    | Force focus back onto the input node  | - |  -  |
+| focus (`Web Only`)    | Force focus back onto the input node  | (): void |  -  |

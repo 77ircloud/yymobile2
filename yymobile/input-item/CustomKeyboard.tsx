@@ -4,7 +4,7 @@ import TouchFeedback from 'rmc-feedback';
 
 export class KeyboardItem extends React.Component<any, any> {
   static defaultProps = {
-    prefixCls: 'am-number-keyboard',
+    prefixCls: 'yy-number-keyboard',
     onClick: () => {},
     disabled: false,
   };

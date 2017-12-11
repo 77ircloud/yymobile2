@@ -29,7 +29,7 @@ subtitle: 文本输入
 | placeholder      | placeholder        | String | ''  |
 | editable    | 是否可编辑        | bool |  true  |
 | disabled    | 是否禁用        | bool |  false  |
-| clear      |  是否带清除功能(仅`editable`为`true`,`disabled`为`false`,`value`设置才生效) | bool | false  |
+| clear      |  是否带清除功能(仅`editable`为`true`,`disabled`为`false`才生效) | bool | false  |
 | maxLength      |  最大长度      | number |  无  |
 | onChange    | change 事件触发的回调函数 | (val: string): void |  -  |
 | onBlur     | blur 事件触发的回调函数 | (val: string): void |   -  |
@@ -42,12 +42,15 @@ subtitle: 文本输入
 | updatePlaceholder (`web only`) | 当清除内容时，是否将清除前的内容替换到 placeholder 中 | bool |  false  |
 | prefixListCls (`web only`)    |   列表 className 前缀      | String |  `am-list`  |
 | name (`web only`)   | input 的 name        | String |  无  |
+| moneyKeyboardAlign (`web only`)   | 文字排版起始方向, 只有 `type='money'` 支持， 可选为 `'left'`, `'right'`       | String |  'right'  |
 | locale   | 国际化，可覆盖全局`[LocaleProvider](https://mobile.ant.design/components/locale-provider)`的配置, 当`type`为`money`，可以自定义确认按钮的文案。 | Object: { confirmLabel } |  无 |
 
 > 更多 react-native `InputItem` 属性请参考 react-native TextInput (http://facebook.github.io/react-native/docs/textinput.html)
 
+> 注意: `InputItem` 当 `type=number` 时不支持输入负号, 你可以利用 `type=text` 来自己实现。
+
 ## InputItem methods
 
-Property | Description | Type | Default
+属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| focus (`Web Only`)    | Force focus back onto the input node  | - |  -  |
+| focus (`Web Only`)    | 使 input 聚焦  | (): void |  -  |
