@@ -29,7 +29,6 @@ export default class Carousel extends React.Component<Props, any> {
     if (indicator) {
       myDots = false;
     }
-    console.log(indicator);
 
     return (
       <div className="yy-carousel-container">

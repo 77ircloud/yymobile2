@@ -46,7 +46,6 @@ export { default as Progress } from './progress/index';
 
 export { default as Radio } from './radio/index';
 export { default as Range } from './range/index';
-export { default as RefreshControl } from './refresh-control/index';
 export { default as Result } from './result/index';
 export { default as SearchBar } from './search-bar/index';
 export { default as SegmentedControl } from './segmented-control/index';
@@ -72,6 +71,5 @@ export { default as YyBar } from './yy-bar/index';
 export { default as DatePickere } from './yy-date-range-picker/DatePicker';
 export { default as YyTabs } from './yy-tabs/index';
 export { default as YyButton } from './yy-button/index';
-export { default as YyPullLoad } from './yy-pull-load/index';
 export { default as YySearchBar } from './yy-search-bar/index';
 export { default as YyUpload } from './yy-upload/index';

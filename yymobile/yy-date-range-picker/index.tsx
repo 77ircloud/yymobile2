@@ -1,7 +1,7 @@
 import React from 'react';
 import IDatePickerProps from './IDatePickerProps';
 import PopupPicker from './Popup';
-import { IPopupPickerProps } from './PopupPickerTypes';
+import {IPopupPickerProps} from './PopupPickerTypes';
 import DatePickere from "./DatePicker";
 
 let now = new Date();
@@ -19,6 +19,8 @@ export interface IPopupDatePickerProps extends IPopupPickerProps {
   disabled?: boolean;
   locale?: any;
   onDateChange?: (date: any) => void;
+  startDate?: any;
+  endDate?: any;
 }
 
 class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
@@ -28,7 +30,7 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
   };
 
   onOk = (startTime, endTime) => {
-    const { onOk } = this.props;
+    const {onOk} = this.props;
     if (onOk) {
       const okRes = onOk(startTime, endTime);
       if (okRes || okRes === undefined) {
@@ -40,7 +42,7 @@ class YyDateRangePicker extends React.Component<IPopupDatePickerProps, any> {
   }
 
   render() {
-    const { minDate, maxDate, mode, locale, onDateChange, defaultDate, startDate, endDate} = this.props;
+    const {minDate, maxDate, mode, locale, onDateChange, defaultDate, startDate, endDate} = this.props;
     const datePicker = (
       <DatePickere
         rootNativeProps={{'data-xx': 'yy'}}

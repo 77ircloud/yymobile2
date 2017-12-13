@@ -16,6 +16,7 @@ export interface ModalProps {
   onAnimationEnd?: (visible: boolean) => void;
   animateAppear?: boolean;
   styles?: any;
+  popupDiyClassName?: any;
   /** web only */
   prefixCls?: string;
   transitionName?: string;
@@ -35,22 +36,20 @@ export type Action = {
   style?: {},
 };
 export type Callback = (valueOrLogin: string, password?: string) => void;
+
 export abstract class ModalComponent<P, S> extends React.Component<P, S> {
-  static alert: (
-    title: string | JSX.Element,
-    message: string | JSX.Element,
-    actions?: Action[],
-  ) => { close: () => void };
+  static alert: (title: string | JSX.Element,
+                 message: string | JSX.Element,
+                 actions?: Action[],) => { close: () => void };
 
-  static prompt: (
-    title: string | JSX.Element,
-    message: string | JSX.Element,
-    callbackOrActions: Callback | Action[],
-    type?: 'default' | 'secure-text' | 'login-password',
-    defaultValue?: string,
-  ) => { close: () => void };
+  static prompt: (title: string | JSX.Element,
+                  message: string | JSX.Element,
+                  callbackOrActions: Callback | Action[],
+                  type?: 'default' | 'secure-text' | 'login-password',
+                  defaultValue?: string,
+                  placeholders ?: any,
+                  platform ?: any,
+                  maxLength?: any) => { close: () => void };
 
-  static operation: (
-    actions?: Action[],
-  ) => { close: () => void };
+  static operation: (actions?: Action[],) => { close: () => void };
 }

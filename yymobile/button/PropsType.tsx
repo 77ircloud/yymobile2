@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface ButtonProps {
+export default interface ButtonProps {
   type?: 'primary' | 'warning' | 'ghost';
   size?: 'large' | 'small';
   activeStyle?: boolean|Object;

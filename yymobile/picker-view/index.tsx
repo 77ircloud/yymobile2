@@ -1,6 +1,5 @@
 import React from 'react';
 import { PickerView as PickerView_} from 'antd-mobile';
-import Props from './PropsType';
 
 export interface IPickerView {
   prefixCls?: string;

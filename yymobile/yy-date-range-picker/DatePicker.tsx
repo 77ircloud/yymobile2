@@ -1,6 +1,6 @@
 import React from 'react';
 import MultiPicker from 'rmc-picker/lib/MultiPicker';
-import Picker from 'rmc-picker/lib/Picker';
+import Picker from 'rmc-picker';
 import IDatePickerProps from './IDatePickerProps';
 import defaultLocale from './locale/en_US';
 
@@ -31,6 +31,7 @@ const TIME = 'time';
 const MONTH = 'month';
 const YEAR = 'year';
 const ONE_DAY = 24 * 60 * 60 * 1000;
+
 
 class DatePicker extends React.Component<IDatePickerProps, any> {
   static defaultProps = {
@@ -63,7 +64,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
   onValueChange = (values, index) => {
     const value = parseInt(values[index], 10);
     const props = this.props;
-    const { mode } = props;
+    const {mode} = props;
     let newValue = cloneDate(this.getDate());
     if (mode === DATETIME || mode === DATE || mode === YEAR || mode === MONTH) {
       switch (index) {
@@ -211,7 +212,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
   }
 
   getDateData() {
-    const { locale, formatMonth, formatDay, mode } = this.props;
+    const {locale, formatMonth, formatDay, mode} = this.props;
     const date = this.getDate();
     const selYear = date.getFullYear();
     const selMonth = date.getMonth();
@@ -228,9 +229,9 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
         label: i + locale.year + '',
       });
     }
-    const yearCol = { key: 'year', props: { children: years } };
+    const yearCol = {key: 'year', props: {children: years}};
     if (mode === YEAR) {
-      return [ yearCol ];
+      return [yearCol];
     }
 
     const months: any[] = [];
@@ -249,7 +250,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
         label,
       });
     }
-    const monthCol = { key: 'month', props: { children: months } };
+    const monthCol = {key: 'month', props: {children: months}};
     if (mode === MONTH) {
       return [yearCol, monthCol];
     }
@@ -274,7 +275,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
     return [
       yearCol,
       monthCol,
-      { key: 'day', props: { children: days } },
+      {key: 'day', props: {children: days}},
     ];
   }
 
@@ -297,7 +298,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
     let maxHour = 23;
     let minMinute = 0;
     let maxMinute = 59;
-    const { mode, locale, minuteStep, use12Hours } = this.props;
+    const {mode, locale, minuteStep, use12Hours} = this.props;
     const date = this.getDate();
     const minDateMinute = this.getMinMinute();
     const maxDateMinute = this.getMaxMinute();
@@ -342,7 +343,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
       minHour = this.getDisplayHour(minHour);
     } else if (minHour === 0 && use12Hours) {
       minHour = 1;
-      hours.push({ value: '0', label: locale.hour ? '12' + locale.hour : '12' });
+      hours.push({value: '0', label: locale.hour ? '12' + locale.hour : '12'});
     }
     maxHour = this.getDisplayHour(maxHour);
     for (let i = minHour; i <= maxHour; i++) {
@@ -360,11 +361,11 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
       });
     }
     return [
-      { key: 'hours', props: { children: hours } },
-      { key: 'minutes', props: { children: minutes } },
+      {key: 'hours', props: {children: hours}},
+      {key: 'minutes', props: {children: minutes}},
     ].concat(use12Hours ? [{
       key: 'ampm',
-      props: { children: [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }]},
+      props: {children: [{value: '0', label: locale.am}, {value: '1', label: locale.pm}]},
     }] : []);
   }
 
@@ -373,7 +374,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
   }
 
   clipDate(date) {
-    const { mode } = this.props;
+    const {mode} = this.props;
     const minDate = this.getMinDate();
     const maxDate = this.getMaxDate();
     if (mode === DATETIME) {
@@ -409,7 +410,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
   }
 
   getValueCols() {
-    const { mode, use12Hours } = this.props;
+    const {mode, use12Hours} = this.props;
     const date = this.getDate();
     let cols: any[] = [];
     let value: any[] = [];
@@ -451,8 +452,8 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
   }
 
   render() {
-    const { value, cols } = this.getValueCols();
-    const { mode, disabled, pickerPrefixCls, prefixCls, rootNativeProps, className, style } = this.props;
+    const {value, cols} = this.getValueCols();
+    const {mode, disabled, pickerPrefixCls, prefixCls, rootNativeProps, className, style} = this.props;
     const multiStyle = {
       flexDirection: 'row',
       alignItems: 'center',
@@ -469,7 +470,7 @@ class DatePicker extends React.Component<IDatePickerProps, any> {
       >
         {cols.map(p => (
           <Picker
-            style={{ flex: 1 }}
+            style={{flex: 1}}
             key={p.key}
             disabled={disabled}
             prefixCls={pickerPrefixCls}

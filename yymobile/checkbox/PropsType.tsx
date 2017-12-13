@@ -4,6 +4,7 @@ export interface CheckboxProps {
   style?: {};
   defaultChecked?: boolean;
   checked?: boolean;
+  multiSelect?: boolean;
   disabled?: boolean;
   onChange?: Function;
   /** web only */
@@ -21,7 +22,7 @@ export interface CheckboxItemProps extends CheckboxProps {
   extra?: any;
   onClick?: () => any;
   checkboxStyle?: any; // rn only
-  checkboxProps?: Object;
+  checkboxProps?: CheckboxProps;
   prefixCls?: string;
 }
 

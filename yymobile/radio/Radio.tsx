@@ -1,9 +1,9 @@
 import React from 'react';
-import { RadioProps } from './PropsType';
-import { Radio as Radio_ } from 'antd-mobile';
+import {RadioProps} from './PropsType';
+import {Radio as Radio_} from 'antd-mobile';
 
 export default class Radio extends React.Component<RadioProps, any> {
-
+  static RadioItem: any;
   static defaultProps = {
     prefixCls: 'yy-radio',
     wrapLabel: true,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid as Grid_} from 'antd-mobile';
-import GridProps from './PropsType';
+import {Grid as Grid_} from 'antd-mobile';
+import {GridProps} from './PropsType';
 
 export default class Grid extends React.Component<GridProps, any> {
 

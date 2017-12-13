@@ -3,9 +3,10 @@
 interface NavBarProps {
   prefixCls?: string;
   className?: string;
+  placeholder?: string;
   children?: any;
   mode?: 'dark' | 'light';
-  iconName?: string | boolean | null;
+  iconName?: string;
   leftContent?: any;
   rightContent?: any;
   onLeftClick?: () => void;

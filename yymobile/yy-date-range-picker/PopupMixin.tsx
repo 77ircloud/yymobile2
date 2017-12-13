@@ -156,11 +156,6 @@ export default {
           ref: this.saveRef,
         }));
       }
-      return React.cloneElement(this.props.picker, ({
-        [this.props.pickerValueProp]: pickerValue,
-        [this.props.pickerValueChangeProp]: this.onPickerChange,
-        ref: this.saveRef,
-      }));
     } else {
       return this.props.content;
     }

@@ -153,9 +153,9 @@ export default function prompt(title, message, callbackOrActions,
 
   function close() {
     // 直接获取 TextareaItem 里的值重置
-    if (textareaItemRef) {
-      textareaItemRef.textareaRef.value = '';
-    }
+      if (textareaItemRef) {
+          textareaItemRef.textareaRef.value = '';
+      }
 
     ReactDOM.unmountComponentAtNode(div);
     if (div && div.parentNode) {
@@ -204,9 +204,12 @@ export default function prompt(title, message, callbackOrActions,
     };
     button.onPress = () => {
       const res = orginPress();
+      if(res === false){
+        return;
+      }
       if (res && res.then) {
-        res.then(() => {
-          close();
+        res.then((data) => {
+            data !== false && close();
         });
       } else {
         close();
