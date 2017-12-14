@@ -47,7 +47,8 @@ class BasicInputExample extends React.Component {
             value={this.state.aaValue}
             onChange={this.handleChange}
             ref={el => this.autoFocusInst = el}
-          >标题</InputItem>
+            fractionDigits={3}
+          >输入数字</InputItem>
           <InputItem
             {...getFieldProps('autofocus')}
             clear

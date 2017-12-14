@@ -29,6 +29,7 @@ interface InputItemProps {
   children?: any;
   updatePlaceholder?: boolean;
   styles?: any;
+  fractionDigits?: any;
   locale?: object;
 }
 

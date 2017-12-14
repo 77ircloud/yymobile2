@@ -87,7 +87,7 @@ class InputItem extends React.Component<InputItemProps, any> {
 
   onInputChange = (e) => {
     let value = e.target.value;
-    const {onChange, type} = this.props;
+    const {onChange, type, fractionDigits} = this.props;
 
     switch (type) {
       case 'text':
@@ -105,7 +105,11 @@ class InputItem extends React.Component<InputItemProps, any> {
         }
         break;
       case 'number':
-        let tempValue = value.match(/(0|(0|[1-9][0-9]*)+(\.\d*)?)/);
+        if (!/^[0-9]*[1-9][0-9]*$/.test(fractionDigits)) {
+          throw new Error('fractionDigits 必须为正整数');
+        }
+        const exp = new RegExp(`(0|(0|[1-9][0-9]*)+(\\.\\d${fractionDigits ? `{0,${fractionDigits}}` : '*'})?)`);
+        let tempValue = value.match(exp);
         value = tempValue === null ? '' : tempValue[0];
         break;
       case 'password':
