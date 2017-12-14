@@ -108,7 +108,7 @@ class InputItem extends React.Component<InputItemProps, any> {
         if (!/^[0-9]*[1-9][0-9]*$/.test(fractionDigits)) {
           throw new Error('fractionDigits 必须为正整数');
         }
-        const exp = new RegExp(`(0|(0|[1-9][0-9]*)+(\\.\\d${fractionDigits ? `{0,${fractionDigits}}` : '*'})?)`);
+        const exp = new RegExp(`(0|[1-9][0-9]*)(\\.\\d${fractionDigits ? `{0,${fractionDigits}}` : '*'})?`);
         let tempValue = value.match(exp);
         value = tempValue === null ? '' : tempValue[0];
         break;
