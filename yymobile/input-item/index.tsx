@@ -56,9 +56,12 @@ class InputItem extends React.Component<InputItemProps, any> {
 
   constructor(props) {
     super(props);
+
+    let value = props.value || props.defaultValue || '';
+    value = this.formatValue(value);
     this.state = {
       placeholder: props.placeholder,
-      value: props.value || props.defaultValue || '',
+      value,
     };
   }
 
@@ -69,8 +72,9 @@ class InputItem extends React.Component<InputItemProps, any> {
       });
     }
     if ('value' in nextProps) {
+      let value = this.formatValue(nextProps.value);
       this.setState({
-        value: nextProps.value,
+        value: value
       });
     }
   }
@@ -86,9 +90,12 @@ class InputItem extends React.Component<InputItemProps, any> {
     }
   }
 
-  onInputChange = (e) => {
-    let value = e.target.value;
-    const {onChange, type, fractionDigits, integers = 16} = this.props;
+  formatValue = (value) => {
+    if (value === undefined) {
+      return value
+    }
+
+    const {type, fractionDigits, integers = 16} = this.props;
 
     switch (type) {
       case 'text':
@@ -106,6 +113,7 @@ class InputItem extends React.Component<InputItemProps, any> {
         }
         break;
       case 'number':
+        value = value + '';
         let exp;
         if (value.indexOf('.') === -1) {
           exp = new RegExp(`(0|[1-9][0-9]{0,${integers - 1}})`);
@@ -120,6 +128,14 @@ class InputItem extends React.Component<InputItemProps, any> {
       default:
         break;
     }
+    return value
+  };
+
+  onInputChange = (e) => {
+    let value = e.target.value;
+    const {onChange} = this.props;
+
+    value = this.formatValue(value);
     if (!('value' in this.props)) {
       this.setState({value});
     } else {
