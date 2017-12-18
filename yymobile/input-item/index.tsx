@@ -8,6 +8,27 @@ import CustomInput from './CustomInput';
 import {getComponentLocale} from '../_util/getLocale';
 import TouchFeedback from 'rmc-feedback';
 
+function removeZero(str) {
+  if (+str === 0) {
+    return str;
+  }
+  if (/^0*\./.test(str)) {
+    return str.slice(countZero(str) - 1);
+  } else {
+    return str.slice(countZero(str));
+  }
+}
+
+function countZero(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] !== '0') {
+      break;
+    }
+  }
+  return i;
+}
+
+
 export interface InputItemProps extends BasePropsType {
   prefixCls?: string;
   prefixListCls?: string;
@@ -114,7 +135,9 @@ class InputItem extends React.Component<InputItemProps, any> {
         break;
       case 'number':
         value = value + '';
-        let exp;
+        let reg = /[0-9]*(\.[0-9]*)?/, exp, matches;
+        value = (matches = value.match(reg)) ? matches[0] : 0;
+        value = removeZero(value);
         if (value.indexOf('.') === -1) {
           exp = new RegExp(`(0|[1-9][0-9]{0,${integers - 1}})`);
         } else {
