@@ -29,8 +29,10 @@ interface InputItemProps {
   children?: any;
   updatePlaceholder?: boolean;
   styles?: any;
-  fractionDigits?: any;
+  fractionDigits?: number;
+  integers?: number;
   locale?: object;
+
 }
 
 export default InputItemProps;
