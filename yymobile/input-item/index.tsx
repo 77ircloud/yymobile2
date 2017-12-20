@@ -289,7 +289,7 @@ class InputItem extends React.Component<InputItemProps, any> {
     let patternProps;
     if (type === 'number') {
       patternProps = {
-        pattern: '[0-9]*',
+        // pattern: '[0-9]*',
       };
     }
 
