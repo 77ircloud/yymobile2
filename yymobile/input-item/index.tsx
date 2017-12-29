@@ -286,13 +286,6 @@ class InputItem extends React.Component<InputItemProps, any> {
       inputType = type;
     }
 
-    let patternProps;
-    if (type === 'number') {
-      patternProps = {
-        // pattern: '[0-9]*',
-      };
-    }
-
     let classNameProps;
     if (type === 'digit') {
       classNameProps = {
@@ -325,7 +318,6 @@ class InputItem extends React.Component<InputItemProps, any> {
               />
             ) : (
               <Input
-                {...patternProps}
                 {...restProps}
                 {...classNameProps}
                 value={fixControlledValue(value)}
