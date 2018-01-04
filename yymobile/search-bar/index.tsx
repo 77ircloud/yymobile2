@@ -36,8 +36,11 @@ export default class SearchBar extends React.Component<SearchBarProps, SearchBar
   }
 
   componentDidMount() {
-    const initBtn = window.getComputedStyle(this.rightBtnRef);
-    this.rightBtnInitMarginleft = initBtn['margin-left'];
+    if (this.rightBtnRef) {
+      const initBtn = window.getComputedStyle(this.rightBtnRef);
+      this.rightBtnInitMarginleft = initBtn['margin-left'];
+    }
+
     if ((this.props.autoFocus || this.state.focused) && navigator.userAgent.indexOf('AlipayClient') > 0) {
       this.inputRef.focus();
     }
@@ -50,12 +53,12 @@ export default class SearchBar extends React.Component<SearchBarProps, SearchBar
     const realWidth = this.syntheticPhContainerRef.getBoundingClientRect().width; // 包含小数
     if (this.inputContainerRef.className.indexOf(`${this.props.prefixCls}-start`) > -1) {
       this.syntheticPhRef.style.width = `${Math.ceil(realWidth)}px`;
-      if (!this.props.showCancelButton) {
+      if (this.rightBtnRef && !this.props.showCancelButton) {
         this.rightBtnRef.style.marginRight = 0;
       }
     } else {
       this.syntheticPhRef.style.width = '100%';
-      if (!this.props.showCancelButton) {
+      if (this.rightBtnRef && !this.props.showCancelButton) {
         this.rightBtnRef.style.marginRight =
           `-${this.rightBtnRef.offsetWidth + parseInt(this.rightBtnInitMarginleft, 10)}px`;
       }

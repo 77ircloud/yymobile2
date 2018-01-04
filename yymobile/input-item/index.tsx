@@ -138,7 +138,7 @@ class InputItem extends React.Component<InputItemProps, any> {
         let reg = /[0-9]*(\.[0-9]*)?/, exp, matches;
         value = (matches = value.match(reg)) ? matches[0] : 0;
         value = removeZero(value);
-        if (value.indexOf('.') === -1) {
+        if (+fractionDigits === 0 || value.indexOf('.') === -1) {
           exp = new RegExp(`(0|[1-9][0-9]{0,${integers - 1}})`);
         } else {
           exp = new RegExp(`(0|[1-9][0-9]{0,${integers - 1}})(\\.\\d${fractionDigits ? `{0,${fractionDigits}}` : '*'})`);
